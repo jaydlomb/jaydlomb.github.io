@@ -14,7 +14,7 @@
       <nav>
         <ul>
           <li><a href="index.html">Home</a></li>
-          <li><a href="product.html">Products</a></li>
+          <li><a href="product.md">Products</a></li>
           <li><a href="contact2.html">Contact</a></li>
         </ul>
       </nav>
