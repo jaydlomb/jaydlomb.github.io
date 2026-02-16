@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PokéVault Cards - Contact</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <h1>Contact Us</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="product.html">Products</a></li>
+          <li><a href="contact2.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <section>
+      <h2>We’d love to hear from you!</h2>
+      <p>Have a question or looking for a specific item? Reach out to us!</p>
+      <div class="contact-info">
+        <p><strong>Email:</strong> support@goldenroddept.com</p>
+        <p><strong>Phone:</strong> (111) 123-4567</p>
+      </div>
+    </section>
+    <footer>
+      <p>&copy; 2025 GDS </p>
+    </footer>
+  </div>
+</body>
+</html>
