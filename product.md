@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PokéVault Cards - Products</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Our Items</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="product.html">Products</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <section>
+      <h2>Healing Items</h2>
+      <table>
+        <tr>
+          <th>Item</th>
+          <th>Description</th>
+          <th>Price</th>
+        </tr>
+        <tr>
+          <td>Potion</td>
+          <td>Restores 20 HP</td>
+          <td>$300</td>
+        </tr>
+        <tr>
+          <td>Super Potion</td>
+          <td>Heals 50 HP</td>
+          <td>$700</td>
+        </tr>
+        <tr>
+          <td>Hyper Potion</td>
+          <td>Heals 200 HP</td>
+          <td>$1200</td>
+        </tr>
+        <tr>
+          <td>Revive</td>
+          <td>Revives a fainted pokemon to half HP</td>
+          <td>$1500</td>
+        </tr>
+        <tr>
+          <td>Antidote</td>
+          <td>Cures a Pokemon of poison</td>
+          <td>$100</td>
+        </tr>
+        <tr>
+          <td>Paralyze Heal</td>
+          <td>Cures a Pokemon of paralysis</td>
+          <td>$250</td>
+        </tr>
+      </table>
+      <h2>PokéBalls</h2>
+      <table>
+        <tr>
+          <th>Item</th>
+          <th>Description</th>
+          <th>Price</th>
+        </tr>
+        <tr>
+          <td>Poke Ball</td>
+          <td>Basic form of a Poke Ball used to catch wild Pokemon</td>
+          <td>$200</td>
+        </tr>
+        <tr>
+          <td>Great Ball</td>
+          <td>An improved vairant of a Poke Ball used to catch wild Pokemon</td>
+          <td>$600</td>
+        </tr>
+        <tr>
+          <td>Ultra Ball</td>
+          <td>An improved variant of a Great Ball used to catch wild Pokemon</td>
+          <td>$1200</td>
+        </tr>
+        <tr>
+          <td>Dusk Ball</td>
+          <td>Can be used to catch wild Pokemon, more likely to succeed if used at night or in a cave</td>
+          <td>$700</td>
+        </tr>
+        <tr>
+          <td>Net Ball</td>
+          <td>Can be used to catch wild Pokemon, more likely to succeed if used on Water or Bug type Pokemon</td>
+          <td>$800</td>
+        </tr>
+      </table>
+    </section>
+    <footer>
+      <p>&copy; 2025 GDS</p>
+    </footer>
+  </div>
+</body>
+</html>
