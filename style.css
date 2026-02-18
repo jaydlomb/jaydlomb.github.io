@@ -19,6 +19,14 @@ header {
   border-radius: 10px;
 }
 
+.skills-flex {
+  display: flex;
+}
+
+.skills-flex ul {
+  flex: 1;
+}
+
 nav ul {
   list-style-type: none;
   padding: 0;
