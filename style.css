@@ -13,17 +13,17 @@ body {
 }
 
 header {
-  background-color: #ffcb05;
+  background-color: #127bc0;
   padding: 10px;
   text-align: center;
   border-radius: 10px;
 }
 
-.skills-flex {
+.flex {
   display: flex;
 }
 
-.skills-flex ul {
+.flex ul {
   flex: 1;
 }
 
@@ -63,6 +63,14 @@ table, th, td {
   border: 1px solid #999;
   padding: 8px;
   text-align: center;
+}
+
+.right {
+  float: right;
+}
+
+.left{
+  float: left
 }
 
 footer {
