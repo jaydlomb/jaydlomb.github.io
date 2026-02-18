@@ -19,11 +19,11 @@ header {
   border-radius: 10px;
 }
 
-.flex {
+.skills-flex {
   display: flex;
 }
 
-.flex ul {
+.skills-flex ul {
   flex: 1;
 }
 
