@@ -1,26 +1,28 @@
+import { Box, Heading, Text, VStack, Divider } from '@chakra-ui/react'
+
 export default function Contact() {
+  const info = [
+    { label: 'Phone', value: '(518) 502-3680' },
+    { label: 'Personal Email', value: 'jalombardi2004@gmail.com' },
+    { label: 'Personal Address', value: 'Voorheesville, New York 12186' },
+    { label: 'School Email', value: 'jayden.lombardi@mymail.champlain.edu' },
+    { label: 'School Address', value: 'Champlain College, Maple Street, Burlington VT 05401' },
+  ]
+
   return (
-    <div className="container">
-      <header>
-        <h1>Contact Info</h1>
-      </header>
+    <Box maxW="600px" mx="auto">
+      <Heading mb={2}>Contact Info</Heading>
+      <Text color="gray.400" mb={6}>Questions? Comments? Concerns? I look forward to hearing from you!</Text>
+      <Divider mb={6} />
 
-      <section>
-        <h2>I look forward to hearing from you!</h2>
-        <p>Questions? Comments? Concerns?</p>
-        <br />
-        <div className="contact-info">
-          <p><strong>Phone:</strong><br /> (518) 502-3680</p>
-          <p><strong>Personal Email:</strong><br /> jalombardi2004@gmail.com</p>
-          <p><strong>Personal Address:</strong><br /> Voorheesville, New York 12186</p>
-          <p><strong>School Email:</strong><br /> jayden.lombardi@mymail.champlain.edu</p>
-          <p><strong>School Address:</strong><br /> Champlain College, Maple Street, Burlington VT 05401</p>
-        </div>
-      </section>
-
-      <footer>
-        <p>&copy; 2026 Jayden Lombardi</p>
-      </footer>
-    </div>
-  );
+      <VStack align="start" spacing={4}>
+        {info.map(({ label, value }) => (
+          <Box key={label}>
+            <Text fontWeight="bold" color="white">{label}</Text>
+            <Text color="gray.300">{value}</Text>
+          </Box>
+        ))}
+      </VStack>
+    </Box>
+  )
 }

@@ -1,22 +1,39 @@
 import { useNavigate } from 'react-router-dom'
+import { Box, Flex, Image, Heading, Text, Button } from '@chakra-ui/react'
 import photo from '../assets/headshot.png'
 
 export default function Home() {
   const navigate = useNavigate()
 
   return (
-    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '60px', padding: '80px 40px', minHeight: '90vh' }}>
-      <img src={photo} alt="Jayden" style={{ width: '300px', height: '300px', objectFit: 'cover', borderRadius: '8px' }} />
-      <div>
-        <h1 style={{ fontSize: '64px', fontWeight: '900', lineHeight: 1 }}>Hello!</h1>
-        <p style={{ fontSize: '20px', fontWeight: 'bold', marginTop: '16px' }}>I'm Jayden!</p>
-        <p style={{ marginTop: '8px', maxWidth: '360px', lineHeight: 1.6 }}>Game Programmer always striving to create, learn, and code more!</p>
-        <div style={{ display: 'flex', gap: '20px', marginTop: '32px' }}>
-          <button onClick={() => navigate('/resume')} style={{ width: '100px', height: '100px', borderRadius: '50%', border: 'none', background: '#f0a500', fontWeight: 'bold', fontSize: '16px', cursor: 'pointer' }}>Resume</button>
-          <button onClick={() => navigate('/projects')} style={{ width: '100px', height: '100px', borderRadius: '50%', border: 'none', background: '#e84040', fontWeight: 'bold', fontSize: '16px', cursor: 'pointer', color: '#fff' }}>Projects</button>
-          <button onClick={() => navigate('/contact')} style={{ width: '100px', height: '100px', borderRadius: '50%', border: 'none', background: '#2a75bb', fontWeight: 'bold', fontSize: '16px', cursor: 'pointer', color: '#fff' }}>Contact</button>
-        </div>
-      </div>
-    </div>
+    <Flex align="center" justify="center" gap={16} px={10} minH="90vh" wrap="wrap">
+      <Image src={photo} alt="Jayden" boxSize="300px" objectFit="cover" borderRadius="8px" />
+
+      <Box>
+        <Heading fontSize="7xl" fontWeight="900" lineHeight={1}>Hello!</Heading>
+        <Text fontSize="xl" fontWeight="bold" mt={4}>I'm Jayden!</Text>
+        <Text mt={2} maxW="360px" lineHeight={1.6} color="gray.300">
+          Game Programmer always striving to create, learn, and code more!
+        </Text>
+
+        <Flex gap={5} mt={8}>
+          <Button onClick={() => navigate('/resume')}
+            borderRadius="full" boxSize="100px" bg="yellow.400" color="black"
+            fontWeight="bold" fontSize="md" _hover={{ bg: 'yellow.300' }}>
+            Resume
+          </Button>
+          <Button onClick={() => navigate('/projects')}
+            borderRadius="full" boxSize="100px" bg="red.500" color="white"
+            fontWeight="bold" fontSize="md" _hover={{ bg: 'red.400' }}>
+            Projects
+          </Button>
+          <Button onClick={() => navigate('/contact')}
+            borderRadius="full" boxSize="100px" bg="blue.500" color="white"
+            fontWeight="bold" fontSize="md" _hover={{ bg: 'blue.400' }}>
+            Contact
+          </Button>
+        </Flex>
+      </Box>
+    </Flex>
   )
 }
