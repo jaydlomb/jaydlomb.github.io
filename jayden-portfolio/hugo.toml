@@ -1,0 +1,4 @@
+baseURL = 'https://jaydlomb.github.io/'
+languageCode = 'en-us'
+title = 'Jayden Lombardi'
+theme = 'hugo-theme-vng-blue'
