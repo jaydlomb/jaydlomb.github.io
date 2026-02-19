@@ -1,10 +1,10 @@
-import { Box, Heading, Text, Divider, SimpleGrid, UnorderedList, ListItem, Link, Flex } from '@chakra-ui/react'
+import { Box, Heading, Text, Separator, SimpleGrid, List, Link, Flex } from '@chakra-ui/react'
 
 function Section({ title }) {
   return (
     <>
       <Heading size="md" mt={8} mb={3} color="white">{title}</Heading>
-      <Divider mb={4} />
+      <Separator mb={4} />
     </>
   )
 }
@@ -21,9 +21,9 @@ function Entry({ title, subtitle, location, date, bullets }) {
         <Text as="i" color="gray.400" fontSize="sm">{location}</Text>
       </Flex>
       {bullets && (
-        <UnorderedList mt={2} pl={4} spacing={1}>
-          {bullets.map((b, i) => <ListItem key={i} color="gray.300" fontSize="sm">{b}</ListItem>)}
-        </UnorderedList>
+        <List.Root mt={2} pl={4} spacing={1}>
+          {bullets.map((b, i) => <List.Item key={i} color="gray.300" fontSize="sm">{b}</List.Item>)}
+        </List.Root>
       )}
     </Box>
   )
@@ -37,7 +37,7 @@ export default function Resume() {
       <Heading size="xl" color="white">Jayden Lombardi</Heading>
       <Text color="gray.400" mt={1}>jalombardi2004@gmail.com | (518) 502-3680 | Albany, NY</Text>
       <Link href="https://www.linkedin.com/in/jayden-lombardi/" isExternal color="blue.400">LinkedIn</Link>
-      <Divider mt={4} mb={4} />
+      <Separator mt={4} mb={4} />
       <Flex justify="space-between">
         <Text color="gray.300"><strong>Bachelor of Science in Video Game Programming</strong>, Minor in Computer Science</Text>
         <Text color="gray.400" fontSize="sm">May 2026</Text>
@@ -61,16 +61,16 @@ export default function Resume() {
       {/* Skills */}
       <Section title="Skills" />
       <SimpleGrid columns={2} spacing={4}>
-        <UnorderedList spacing={1}>
+        <List.Root pl={4} spacing={1}>
           {['C#', 'C++', 'Unity 2022+', 'Unreal Engine 4 + 5', 'OpenGL', 'Python', 'HTML + CSS'].map(s => (
-            <ListItem key={s} color="gray.300" fontSize="sm">{s}</ListItem>
+            <List.Item key={s} color="gray.300" fontSize="sm">{s}</List.Item>
           ))}
-        </UnorderedList>
-        <UnorderedList spacing={1}>
+        </List.Root>
+        <List.Root pl={4} spacing={1}>
           {['User Interface / User Experience', 'Game Programming', 'Game Architecture', 'Agile Methodologies', 'Gameplay Mechanics', 'Game Development', 'Communication'].map(s => (
-            <ListItem key={s} color="gray.300" fontSize="sm">{s}</ListItem>
+            <List.Item key={s} color="gray.300" fontSize="sm">{s}</List.Item>
           ))}
-        </UnorderedList>
+        </List.Root>
       </SimpleGrid>
 
       {/* Relevant Courses */}
@@ -83,9 +83,9 @@ export default function Resume() {
         ].map(({ heading, courses }) => (
           <Box key={heading}>
             <Text fontWeight="bold" color="white" mb={2} fontSize="sm">{heading}</Text>
-            <UnorderedList spacing={1}>
-              {courses.map(c => <ListItem key={c} color="gray.300" fontSize="sm">{c}</ListItem>)}
-            </UnorderedList>
+            <List.Root pl={4} spacing={1}>
+              {courses.map(c => <List.Item key={c} color="gray.300" fontSize="sm">{c}</List.Item>)}
+            </List.Root>
           </Box>
         ))}
       </SimpleGrid>

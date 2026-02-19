@@ -1,4 +1,4 @@
-import { Box, Heading, Text, VStack, Divider } from '@chakra-ui/react'
+import { Box, Heading, Text, VStack, Separator } from '@chakra-ui/react'
 
 export default function Contact() {
   const info = [
@@ -13,7 +13,7 @@ export default function Contact() {
     <Box maxW="600px" mx="auto">
       <Heading mb={2}>Contact Info</Heading>
       <Text color="gray.400" mb={6}>Questions? Comments? Concerns? I look forward to hearing from you!</Text>
-      <Divider mb={6} />
+      <Separator mb={6} />
 
       <VStack align="start" spacing={4}>
         {info.map(({ label, value }) => (
