@@ -25,8 +25,7 @@ export default function Contact()
       .catch(() => setError(true))
   }
 
-  return 
-  (
+  return(
     <Box maxW="600px" mx="auto">
       <Heading mb={2}>Contact Info</Heading>
       <Text color="gray.400" mb={6}>Questions? Comments? Concerns? I look forward to hearing from you!</Text>
