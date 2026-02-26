@@ -24,7 +24,8 @@ export default function Layout() {
               { label: 'Projects', to: '/projects' },
               { label: 'Resume', to: '/resume' },
               { label: 'Contact', to: '/contact' },
-            ].map(({ label, to }) => (
+            ].map(({ label, to }, index, arr) => (
+            <>
               <Box
                 key={to}
                 as={Link}
@@ -36,6 +37,8 @@ export default function Layout() {
               >
                 {label}
               </Box>
+              {index < arr.length - 1 && (<Text color="gray.600" fontSize="lg">|</Text>)}
+            </>
             ))}
           </HStack>
         </Flex>
