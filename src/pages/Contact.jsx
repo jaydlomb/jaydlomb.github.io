@@ -28,7 +28,7 @@ export default function Contact()
   return(
     <Box maxW="600px" mx="auto">
       <Heading mb={2}>Contact Info</Heading>
-      <Text color="gray.400" mb={6}>Questions? Comments? Concerns? I look forward to hearing from you!</Text>
+      <Text mb={6}>Questions? Comments? Concerns? I look forward to hearing from you!</Text>
       <Separator mb={6} />
 
       <VStack align="start" spacing={4} mb={10}>

@@ -3,7 +3,7 @@ import { Box, Heading, Text, Separator, SimpleGrid, List, Link, Flex } from '@ch
 function Section({ title }) {
   return (
     <>
-      <Heading size="md" mt={8} mb={3} color="white">{title}</Heading>
+      <Heading size="md" mt={8} mb={3}>{title}</Heading>
       <Separator mb={4} />
     </>
   )
@@ -13,16 +13,16 @@ function Entry({ title, subtitle, location, date, bullets }) {
   return (
     <Box mb={5}>
       <Flex justify="space-between">
-        <Text fontWeight="bold" color="white">{title}</Text>
-        <Text color="gray.400" fontSize="sm">{date}</Text>
+        <Text fontWeight="bold" >{title}</Text>
+        <Text fontSize="sm">{date}</Text>
       </Flex>
       <Flex justify="space-between">
-        <Text as="i" color="gray.300" fontSize="sm">{subtitle}</Text>
-        <Text as="i" color="gray.400" fontSize="sm">{location}</Text>
+        <Text as="i" fontSize="sm">{subtitle}</Text>
+        <Text as="i" fontSize="sm">{location}</Text>
       </Flex>
       {bullets && (
         <List.Root mt={2} pl={4} spacing={1}>
-          {bullets.map((b, i) => <List.Item key={i} color="gray.300" fontSize="sm">{b}</List.Item>)}
+          {bullets.map((b, i) => <List.Item key={i} fontSize="sm">{b}</List.Item>)}
         </List.Root>
       )}
     </Box>
@@ -34,17 +34,17 @@ export default function Resume() {
     <Box maxW="800px" mx="auto">
 
       {/* Header */}
-      <Heading size="xl" color="white">Jayden Lombardi</Heading>
-      <Text color="gray.400" mt={1}>jalombardi2004@gmail.com | (518) 502-3680 | Albany, NY</Text>
+      <Heading size="xl">Jayden Lombardi</Heading>
+      <Text mt={1}>jalombardi2004@gmail.com | (518) 502-3680 | Albany, NY</Text>
       <Link href="https://www.linkedin.com/in/jayden-lombardi/" isExternal color="blue.400">LinkedIn</Link>
       <Separator mt={4} mb={4} />
       <Flex justify="space-between">
-        <Text color="gray.300"><strong>Bachelor of Science in Video Game Programming</strong>, Minor in Computer Science</Text>
-        <Text color="gray.400" fontSize="sm">May 2026</Text>
+        <Text><strong>Bachelor of Science in Video Game Programming</strong>, Minor in Computer Science</Text>
+        <Text fontSize="sm">May 2026</Text>
       </Flex>
       <Flex justify="space-between">
-        <Text color="gray.400" fontSize="sm">Champlain College</Text>
-        <Text color="gray.400" fontSize="sm">Burlington, VT</Text>
+        <Text fontSize="sm">Champlain College</Text>
+        <Text fontSize="sm">Burlington, VT</Text>
       </Flex>
 
       {/* Education */}
@@ -63,12 +63,12 @@ export default function Resume() {
       <SimpleGrid columns={2} spacing={4}>
         <List.Root pl={4} spacing={1}>
           {['C#', 'C++', 'Unity 2022+', 'Unreal Engine 4 + 5', 'OpenGL', 'Python', 'HTML + CSS'].map(s => (
-            <List.Item key={s} color="gray.300" fontSize="sm">{s}</List.Item>
+            <List.Item key={s} fontSize="sm">{s}</List.Item>
           ))}
         </List.Root>
         <List.Root pl={4} spacing={1}>
           {['User Interface / User Experience', 'Game Programming', 'Game Architecture', 'Agile Methodologies', 'Gameplay Mechanics', 'Game Development', 'Communication'].map(s => (
-            <List.Item key={s} color="gray.300" fontSize="sm">{s}</List.Item>
+            <List.Item key={s} fontSize="sm">{s}</List.Item>
           ))}
         </List.Root>
       </SimpleGrid>
@@ -82,9 +82,9 @@ export default function Resume() {
           { heading: 'Math & Fundamentals', courses: ['Data Structures & Algorithms', 'Matrices, Vectors, and 3D Math', 'Discrete Mathematics', 'Linear Algebra', 'Computer Architecture', 'Python Programming', 'Modern Graphics Programming'] },
         ].map(({ heading, courses }) => (
           <Box key={heading}>
-            <Text fontWeight="bold" color="white" mb={2} fontSize="sm">{heading}</Text>
+            <Text fontWeight="bold" mb={2} fontSize="sm">{heading}</Text>
             <List.Root pl={4} spacing={1}>
-              {courses.map(c => <List.Item key={c} color="gray.300" fontSize="sm">{c}</List.Item>)}
+              {courses.map(c => <List.Item key={c} fontSize="sm">{c}</List.Item>)}
             </List.Root>
           </Box>
         ))}
