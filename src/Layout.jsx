@@ -39,7 +39,7 @@ export default function Layout() {
               >
                 {label}
               </Box>
-              {index < arr.length - 1 && (<Text fontSize="lg">|</Text>)}
+              {index < arr.length - 1 && (<Text fontSize="lg" color="gray.white">|</Text>)}
             </>
             ))}
           </HStack>

@@ -10,7 +10,7 @@ export default function Home() {
       <Image src={photo} alt="Jayden" boxSize="500px" objectFit="cover" borderRadius="8px" />
 
       <Box>
-        <Heading fontSize="7xl" fontWeight="900" lineHeight={1}>Hello!</Heading>
+        <Heading fontSize="7xl" fontWeight="900" lineHeight={10}>Hello!</Heading>
         <Text fontSize="xl" fontWeight="bold" mt={4}>I'm Jayden!</Text>
         <Text mt={2} maxW="360px" lineHeight={1.6}>
           Game Programmer always striving to create, learn, and code more!
