@@ -8,10 +8,19 @@ export default function Layout() {
       {/* Header / Nav */}
       <Box as="header" bg="gray.900" px={8} py={4} borderBottom="1px solid" borderColor="gray.700">
         <Flex justify="space-between" align="center">
-          <Text fontWeight="bold" fontSize="lg" color="white">Jayden Lombardi</Text>
+          <Box
+            as={Link}
+            to="/"
+            fontWeight="bold"
+            fontSize="lg"
+            color="white"
+            _hover={{ color: 'gray.300' }}
+            textDecoration="none">
+            Jayden Lombardi
+          </Box>
+
           <HStack spacing={6}>
             {[
-              { label: 'Home', to: '/' },
               { label: 'Projects', to: '/projects' },
               { label: 'Resume', to: '/resume' },
               { label: 'Contact', to: '/contact' },
@@ -22,8 +31,8 @@ export default function Layout() {
                 to={to}
                 color="gray.300"
                 _hover={{ color: 'white' }}
-                fontSize="sm"
-                fontWeight="medium"
+                fontSize="lg"
+                fontWeight="bold"
               >
                 {label}
               </Box>
@@ -39,7 +48,7 @@ export default function Layout() {
 
       {/* Footer */}
       <Box as="footer" bg="gray.900" px={8} py={4} borderTop="1px solid" borderColor="gray.700">
-        <Text color="gray.500" fontSize="sm" textAlign="center">
+        <Text color="white" fontSize="sm" textAlign="center">
           &copy; 2026 Jayden Lombardi
         </Text>
       </Box>
