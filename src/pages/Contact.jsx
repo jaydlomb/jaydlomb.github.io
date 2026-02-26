@@ -21,7 +21,11 @@ export default function Contact()
   {
     e.preventDefault()
     emailjs.sendForm('website_contacting', 'template_thwla8c', form.current, 'zUjiDV0rq9SHYM7dM')
-      .then(() => setSent(true))
+      .then(() => 
+      {
+        setSent(true)
+        e.target.reset()
+      })
       .catch(() => setError(true))
   }
 
@@ -29,7 +33,7 @@ export default function Contact()
     <Box maxW="600px" mx="auto">
       <Heading mb={2}>Contact Info</Heading>
       <Text mb={6}>Questions? Comments? Concerns? I look forward to hearing from you!</Text>
-      <Separator mb={6} />
+      <Separator borderColor="black" mb={6} />
 
       <VStack align="start" spacing={4} mb={10}>
         {info.map(({ label, value }) => (
@@ -40,7 +44,7 @@ export default function Contact()
         ))}
       </VStack>
 
-      <Separator mb={6} />
+      <Separator borderColor="black" mb={6} />
       <Heading size="md" mb={4}>Send a Message</Heading>
 
       <form ref={form} onSubmit={sendEmail}>

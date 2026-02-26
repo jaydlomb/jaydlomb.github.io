@@ -4,7 +4,7 @@ function Section({ title }) {
   return (
     <>
       <Heading size="md" mt={8} mb={3}>{title}</Heading>
-      <Separator mb={4} />
+      <Separator borderColor="black" mb={4} />
     </>
   )
 }
@@ -37,7 +37,7 @@ export default function Resume() {
       <Heading size="xl">Jayden Lombardi</Heading>
       <Text mt={1}>jalombardi2004@gmail.com | (518) 502-3680 | Albany, NY</Text>
       <Link href="https://www.linkedin.com/in/jayden-lombardi/" isExternal color="blue.400">LinkedIn</Link>
-      <Separator mt={4} mb={4} />
+      <Separator borderColor="black" mt={4} mb={4} />
       <Flex justify="space-between">
         <Text><strong>Bachelor of Science in Video Game Programming</strong>, Minor in Computer Science</Text>
         <Text fontSize="sm">May 2026</Text>
@@ -60,17 +60,18 @@ export default function Resume() {
 
       {/* Skills */}
       <Section title="Skills" />
-      <SimpleGrid columns={2} spacing={4}>
-        <List.Root pl={4} spacing={1}>
-          {['C#', 'C++', 'Unity 2022+', 'Unreal Engine 4 + 5', 'OpenGL', 'Python', 'HTML + CSS'].map(s => (
-            <List.Item key={s} fontSize="sm">{s}</List.Item>
-          ))}
-        </List.Root>
-        <List.Root pl={4} spacing={1}>
-          {['User Interface / User Experience', 'Game Programming', 'Game Architecture', 'Agile Methodologies', 'Gameplay Mechanics', 'Game Development', 'Communication'].map(s => (
-            <List.Item key={s} fontSize="sm">{s}</List.Item>
-          ))}
-        </List.Root>
+      <SimpleGrid columns={2} spacing={6}>
+        {[
+          { heading: 'Technical', skills: ['C#', 'C++', 'Unity 2022+', 'Unreal Engine 4 + 5', 'OpenGL', 'Python', 'HTML + CSS'] },
+          { heading: 'Professional', skills: ['User Interface / User Experience', 'Game Programming', 'Game Architecture', 'Agile Methodologies', 'Gameplay Mechanics', 'Game Development', 'Communication'] },
+        ].map(({ heading, skills }) => (
+          <Box key={heading}>
+            <Text fontWeight="bold" mb={2} fontSize="sm">{heading}</Text>
+            <List.Root pl={4} spacing={1}>
+              {skills.map(s => <List.Item key={s} fontSize="sm">{s}</List.Item>)}
+            </List.Root>
+          </Box>
+        ))}
       </SimpleGrid>
 
       {/* Relevant Courses */}
