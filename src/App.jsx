@@ -3,6 +3,7 @@ import Layout from './Layout'
 import Home from './pages/Home'
 import Resume from './pages/Resume'
 import Contact from './pages/Contact'
+import Projects from './pages/Projects'
 
 export default function App() {
   return (
@@ -11,6 +12,7 @@ export default function App() {
         <Route index element={<Home />} />
         <Route path="resume" element={<Resume />} />
         <Route path="contact" element={<Contact />} />
+        <Route path="projects" element={<Projects />} />
       </Route>
     </Routes>
   )

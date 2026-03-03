@@ -27,20 +27,19 @@ export default function Layout() {
               { label: 'Resume', to: '/resume' },
               { label: 'Contact', to: '/contact' },
             ].map(({ label, to }, index, arr) => (
-            <>
-              <Box
-                key={to}
-                as={Link}
-                to={to}
-                color="gray.300"
-                _hover={{ color: 'white' }}
-                fontSize="lg"
-                fontWeight="bold"
-              >
-                {label}
+              <Box key={to} display="contents">
+                <Box
+                  as={Link}
+                  to={to}
+                  color="gray.300"
+                  _hover={{ color: 'white' }}
+                  fontSize="lg"
+                  fontWeight="bold"
+                >
+                  {label}
+                </Box>
+                {index < arr.length - 1 && (<Text fontSize="lg" color="white">|</Text>)}
               </Box>
-              {index < arr.length - 1 && (<Text fontSize="lg" color="gray.white">|</Text>)}
-            </>
             ))}
           </HStack>
         </Flex>
