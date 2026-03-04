@@ -1,4 +1,6 @@
 import { Box, Flex, Image, Text, Heading, Separator, Button } from '@chakra-ui/react'
+import { useNavigate } from 'react-router-dom'
+
 //images import
 import ds from '../assets/images/3ds.png'
 import chyma from '../assets/images/chyma.png'
@@ -8,6 +10,8 @@ import snowboardfree from '../assets/images/snowboardfree.png'
 import virusventure from '../assets/images/virusventure.png'
 
 export default function Projects() {
+const navigate = useNavigate()
+
     return (
         <Box maxW="1200px" mx="auto" mt={10}>
 
@@ -31,7 +35,8 @@ export default function Projects() {
                     <Box maxW="400px">
                         <Flex justify="space-between" align="center" mb={3}>
                             <Heading fontWeight="bold">Chyma and the Toll of Time</Heading>
-                            <Button bg="black" color="white" size="md" _hover={{ bg: 'blue' }}>
+                            
+                            <Button bg="black" color="white" size="md" _hover={{ bg: 'blue' }} onClick={() => navigate('/projects/chyma')}>
                                 View More
                             </Button>
                         </Flex>
@@ -58,7 +63,7 @@ export default function Projects() {
                     <Box maxW="400px">
                         <Flex justify="space-between" align="center" mb={3}>
                             <Heading fontWeight="bold">Knight Light</Heading>
-                            <Button bg="black" color="white" size="md" _hover={{ bg: 'blue' }}>
+                            <Button bg="black" color="white" size="md" _hover={{ bg: 'blue' }} onClick={() => navigate('/projects/knightlight')}>
                                 View More
                             </Button>
                         </Flex>
@@ -86,7 +91,7 @@ export default function Projects() {
                     <Box maxW="400px">
                         <Flex justify="space-between" align="center" mb={3}>
                             <Heading fontWeight="bold">Snowboard Free</Heading>
-                            <Button bg="black" color="white" size="md" _hover={{ bg: 'blue' }}>
+                            <Button bg="black" color="white" size="md" _hover={{ bg: 'blue' }} onClick={() => navigate('/projects/snowboardfree')}>
                                 View More
                             </Button>
                         </Flex>
@@ -113,7 +118,7 @@ export default function Projects() {
                     <Box maxW="400px">
                         <Flex justify="space-between" align="center" mb={3}>
                             <Heading fontWeight="bold">Virus Venture</Heading>
-                            <Button bg="black" color="white" size="md" _hover={{ bg: 'blue' }}>
+                            <Button bg="black" color="white" size="md" _hover={{ bg: 'blue' }} onClick={() => navigate('/projects/virusventure')}>
                                 View More
                             </Button>
                         </Flex>
@@ -145,7 +150,7 @@ export default function Projects() {
                     <Box maxW="400px">
                         <Flex justify="space-between" align="center" mb={3}>
                             <Heading fontWeight="bold">Linking to Nintendo 3DS</Heading>
-                            <Button bg="black" color="white" size="md" _hover={{ bg: 'blue' }}>
+                            <Button bg="black" color="white" size="md" _hover={{ bg: 'blue' }} onClick={() => navigate('/projects/ds')}>
                                 View More
                             </Button>
                         </Flex>
@@ -174,7 +179,7 @@ export default function Projects() {
                     <Box maxW="400px">
                         <Flex justify="space-between" align="center" mb={3}>
                             <Heading fontWeight="bold">Goal Oriented Action Plan</Heading>
-                            <Button bg="black" color="white" size="md" _hover={{ bg: 'blue' }}>
+                            <Button bg="black" color="white" size="md" _hover={{ bg: 'blue' }} onClick={() => navigate('/projects/goap')}>
                                 View More
                             </Button>
                         </Flex>
