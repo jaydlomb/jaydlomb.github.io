@@ -54,15 +54,26 @@ export default function ChymaPage() {
             <List.Item>Programmer - Jayden Lombardo</List.Item>
             <List.Item>Programmer - Drew Herlocher</List.Item>
             <List.Item>Programmer - Dawson Jackson</List.Item>
-            <List.Item>Designer - </List.Item>
-            <List.Item>Artist - </List.Item>
-            <List.Item>Sound - </List.Item>
-            <List.Item>Production - </List.Item>
+            <List.Item>Designer - Lily MacBride</List.Item>
+            <List.Item>Designer - Ben Bradway</List.Item>
+            <List.Item>Designer - Jean-Pierre Bailly-Hall</List.Item>
+            <List.Item>Designer - Ben Baehre</List.Item>
+            <List.Item>Artist - Brandon Bell</List.Item>
+            <List.Item>Artist - Nate Swietlik</List.Item>
+            <List.Item>Artist - Darla Nordstrom</List.Item>
+            <List.Item>Artist - Hanna Bacha</List.Item>
+            <List.Item>Sound - Marie Kutschke</List.Item>
+            <List.Item>Product Owner - Hale Walls</List.Item>
+            <List.Item>Production - Adele Goldader</List.Item>
           </List.Root>
 
           <Text fontWeight="bold">Technology</Text>
           <List.Root pl={4} spacing={1} mb={4}>
-            <List.Item>Unity, C#, Unity Animations, ImGUI</List.Item>
+            <List.Item>Editing Software: Unity 6000.2.2f1, Visual Studios 2022 C#</List.Item>
+            <List.Item>Git Software: GitBash, TortoiseGit, GitHub Desktop</List.Item>
+            <List.Item>Art: Maya, Substance Painter, Substance Designer, Houdini</List.Item>
+            <List.Item>Audio: Cubase, Adobe Audtion</List.Item>
+            <List.Item>Communication: Discord, Mattermost, Jira, Confluence</List.Item>
           </List.Root>
 
           <Text fontWeight="bold">Duration</Text>
@@ -84,24 +95,16 @@ export default function ChymaPage() {
         <Box bg="white" borderRadius="md" flex="0 0 45%" p={10}>
           <Heading fontWeight={"bold"} fontSize={30} mb={4}>Responsibilities</Heading>
           <List.Root pl={4} spacing={2}>
-            <List.Item>Implemented player movement and attacking</List.Item>
-            <List.Item>Implemented dragon segment movement and attacking</List.Item>
-            <List.Item>Implemented premade animations on character and dragon</List.Item>
-            <List.Item>Implemented basic UI for player and dragon health</List.Item>
-            <List.Item>Implemented player and dragon interactions</List.Item>
+            <List.Item>Implemented premade animations on player and enemies</List.Item>
             <List.Item>Used feedback from various testing sessions to improve on mechanics and game feel</List.Item>
             <List.Item>Created and upkept a Technical Plan and Systems + Mechanics List</List.Item>
-            <List.Item>Led the team Git, handling merges and conflicts</List.Item>
           </List.Root>
         </Box>
 
         <Box bg="white" borderRadius="md" flex="0 0 45%" p={10}>
           <Heading fontWeight={"bold"} fontSize={30} mb={4}>Future Changes</Heading>
           <List.Root pl={4} spacing={2}>
-            <List.Item>Better structure with the scripts</List.Item>
-            <List.Item>Better pathfinding on dragon segments</List.Item>
             <List.Item>Better game feel with more testing and feedback</List.Item>
-            <List.Item>Increasing difficulty as dragon segments are defeated</List.Item>
           </List.Root>
         </Box>
       </Flex>
