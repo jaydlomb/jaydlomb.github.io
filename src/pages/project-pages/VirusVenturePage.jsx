@@ -13,28 +13,28 @@ export default function VirusVenturePage() {
   const [btnHovered, setBtnHovered] = useState(false)
 
   return (
-    <Box maxW="1200px" mx="auto" py={10} px={6}>
+    <Box maxW="1200px" mx="auto" py={{ base: 6, lg: 10 }} px={{ base: 4, md: 6 }}>
 
       {/* Hero Section */}
       <Flex
-        gap={10}
+        gap={{ base: 6, lg: 10 }}
         align="center"
-        wrap="wrap"
-        mb={16}
+        direction={{ base: 'column', lg: 'row' }}
+        mb={{ base: 10, lg: 16 }}
         animation={`${fadeSlideUp} 0.6s ease-out forwards`}
         opacity={0}
       >
-        <Box flex={1} minW="400px">
+        <Box flex={1} w="100%">
           <ImageLightbox src={virusventure} alt="Virus Venture" />
         </Box>
 
-        <Box flex={1} minW="300px">
-          <Heading fontSize="4xl" fontWeight="900" color="#000000" letterSpacing="tight" mb={2}>
+        <Box flex={1}>
+          <Heading fontSize={{ base: '2xl', md: '4xl' }} fontWeight="900" color="#000000" letterSpacing="tight" mb={2}>
             Virus <Text as="span" color="#224AA0">Venture</Text>
           </Heading>
           <Box w="60px" h="4px" bg="#224AA0" mb={6} />
 
-          <Text color="#0a1628" fontSize="lg" lineHeight={1.8} mb={8}>
+          <Text color="#0a1628" fontSize={{ base: 'md', lg: 'lg' }} lineHeight={1.8} mb={8}>
             A simple educational platformer, focused on delivering lessons about internet safety through narrative.
             Targets children's familiar topics of interest. Focused on teaching children 8 to 12 years old how to be safe on the internet,
             and maintain their protection.
@@ -46,7 +46,7 @@ export default function VirusVenturePage() {
             target="_blank"
             bg={btnHovered ? '#1a3a7a' : '#224AA0'}
             color="#FFFFFF"
-            px={8}
+            px={{ base: 6, md: 8 }}
             py={6}
             fontWeight="bold"
             letterSpacing="wide"
@@ -62,39 +62,39 @@ export default function VirusVenturePage() {
       </Flex>
 
       {/* About & Video */}
-      <Flex gap={10} wrap="wrap" mb={16} animation={`${fadeSlideUp} 0.6s ease-out 0.1s forwards`} opacity={0}>
-        <Box flex={1} minW="300px">
-          <Heading fontSize="2xl" fontWeight="900" color="#000000" letterSpacing="tight" mb={2}>About</Heading>
+      <Flex gap={{ base: 6, lg: 10 }} direction={{ base: 'column', lg: 'row' }} mb={{ base: 10, lg: 16 }} animation={`${fadeSlideUp} 0.6s ease-out 0.1s forwards`} opacity={0}>
+        <Box flex={1}>
+          <Heading fontSize={{ base: 'xl', md: '2xl' }} fontWeight="900" color="#000000" letterSpacing="tight" mb={2}>About</Heading>
           <Box w="40px" h="3px" bg="#224AA0" mb={6} />
 
-          <Text fontWeight="bold" color="#0a1628" mb={1}>Platform</Text>
+          <Text fontWeight="bold" color="#0a1628" mb={1} fontSize={{ base: 'sm', md: 'md' }}>Platform</Text>
           <List.Root pl={4} spacing={1} mb={5}>
-            <List.Item color="#1e3a5f" fontSize="md">Windows</List.Item>
+            <List.Item color="#1e3a5f" fontSize={{ base: 'sm', md: 'md' }}>Windows</List.Item>
           </List.Root>
 
-          <Text fontWeight="bold" color="#0a1628" mb={1}>Developers</Text>
+          <Text fontWeight="bold" color="#0a1628" mb={1} fontSize={{ base: 'sm', md: 'md' }}>Developers</Text>
           <List.Root pl={4} spacing={1} mb={5}>
-            <List.Item color="#1e3a5f" fontSize="md">Programmer - Jayden Lombardi</List.Item>
+            <List.Item color="#1e3a5f" fontSize={{ base: 'sm', md: 'md' }}>Programmer - Jayden Lombardi</List.Item>
           </List.Root>
 
-          <Text fontWeight="bold" color="#0a1628" mb={1}>Technology</Text>
+          <Text fontWeight="bold" color="#0a1628" mb={1} fontSize={{ base: 'sm', md: 'md' }}>Technology</Text>
           <List.Root pl={4} spacing={1} mb={5}>
-            <List.Item color="#1e3a5f" fontSize="md">Unity, C#</List.Item>
+            <List.Item color="#1e3a5f" fontSize={{ base: 'sm', md: 'md' }}>Unity, C#</List.Item>
           </List.Root>
 
-          <Text fontWeight="bold" color="#0a1628" mb={1}>Duration</Text>
+          <Text fontWeight="bold" color="#0a1628" mb={1} fontSize={{ base: 'sm', md: 'md' }}>Duration</Text>
           <List.Root pl={4} spacing={1}>
-            <List.Item color="#1e3a5f" fontSize="md">Solo Project</List.Item>
+            <List.Item color="#1e3a5f" fontSize={{ base: 'sm', md: 'md' }}>Solo Project</List.Item>
           </List.Root>
         </Box>
 
-        <Flex flex={1} minW="400px" align="center" justify="center">
+        <Flex flex={1} align="center" justify="center">
           <Box
             as="iframe"
             src="https://www.youtube.com/embed/YOUR_VIDEO_ID?vq=hd1080"
             w="100%"
             maxW="700px"
-            h="400px"
+            h={{ base: '250px', md: '400px' }}
             border="2px solid"
             borderColor="#0a1628"
             allowFullScreen
@@ -103,29 +103,29 @@ export default function VirusVenturePage() {
       </Flex>
 
       {/* Responsibilities & Future Changes */}
-      <Flex gap={10} wrap="wrap" mb={16} animation={`${fadeSlideUp} 0.6s ease-out 0.2s forwards`} opacity={0}>
-        <Box flex={1} minW="300px" bg="#e8f0fe" p={8}>
-          <Heading fontSize="2xl" fontWeight="900" color="#000000" letterSpacing="tight" mb={2}>Responsibilities</Heading>
+      <Flex gap={{ base: 4, lg: 10 }} direction={{ base: 'column', md: 'row' }} mb={{ base: 10, lg: 16 }} animation={`${fadeSlideUp} 0.6s ease-out 0.2s forwards`} opacity={0}>
+        <Box flex={1} bg="#e8f0fe" p={{ base: 5, md: 8 }}>
+          <Heading fontSize={{ base: 'lg', md: '2xl' }} fontWeight="900" color="#000000" letterSpacing="tight" mb={2}>Responsibilities</Heading>
           <Box w="40px" h="3px" bg="#224AA0" mb={6} />
           <List.Root pl={4} spacing={2}>
-            <List.Item color="#0a1628" fontSize="md">Implemented player movement and attacking</List.Item>
+            <List.Item color="#0a1628" fontSize={{ base: 'sm', md: 'md' }}>Implemented player movement and attacking</List.Item>
           </List.Root>
         </Box>
 
-        <Box flex={1} minW="300px" bg="#e8f0fe" p={8}>
-          <Heading fontSize="2xl" fontWeight="900" color="#000000" letterSpacing="tight" mb={2}>Future Changes</Heading>
+        <Box flex={1} bg="#e8f0fe" p={{ base: 5, md: 8 }}>
+          <Heading fontSize={{ base: 'lg', md: '2xl' }} fontWeight="900" color="#000000" letterSpacing="tight" mb={2}>Future Changes</Heading>
           <Box w="40px" h="3px" bg="#224AA0" mb={6} />
           <List.Root pl={4} spacing={2}>
-            <List.Item color="#0a1628" fontSize="md">Better structure with the scripts</List.Item>
+            <List.Item color="#0a1628" fontSize={{ base: 'sm', md: 'md' }}>Better structure with the scripts</List.Item>
           </List.Root>
         </Box>
       </Flex>
 
       {/* Gallery */}
       <Box animation={`${fadeSlideUp} 0.6s ease-out 0.3s forwards`} opacity={0}>
-        <Heading fontSize="2xl" fontWeight="900" color="#000000" letterSpacing="tight" mb={2}>Gallery</Heading>
+        <Heading fontSize={{ base: 'lg', md: '2xl' }} fontWeight="900" color="#000000" letterSpacing="tight" mb={2}>Gallery</Heading>
         <Box w="40px" h="3px" bg="#224AA0" mb={8} />
-        <Flex gap={6} wrap="wrap" justify="center">
+        <Flex gap={{ base: 4, md: 6 }} wrap="wrap" justify="center">
           {[1, 2, 3].map((i) => (
             <ImageLightbox key={i} src="https://via.placeholder.com/400x225" alt={`Screenshot ${i}`} />
           ))}
