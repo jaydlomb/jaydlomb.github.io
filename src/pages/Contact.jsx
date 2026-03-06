@@ -33,14 +33,14 @@ export default function Contact() {
   }
 
   return (
-    <Box maxW="600px" mx="auto" py={8}>
+    <Box maxW="600px" mx="auto" py={{ base: 4, lg: 8 }} px={{ base: 4, md: 0 }}>
       {/* Header */}
       <Box
         animation={`${fadeSlideUp} 0.6s ease-out forwards`}
         opacity={0}
       >
         <Heading
-          fontSize="4xl"
+          fontSize={{ base: '2xl', md: '4xl' }}
           fontWeight="900"
           color="#000000"
           letterSpacing="tight"
@@ -48,26 +48,26 @@ export default function Contact() {
         >
           Contact <Text as="span" color="#224AA0">Info</Text>
         </Heading>
-        <Text color="#0a1628" mb={4} fontSize="lg">
+        <Text color="#0a1628" mb={4} fontSize={{ base: 'md', md: 'lg' }}>
           Questions? Comments? Concerns? I look forward to hearing from you!
         </Text>
-        <Box w="60px" h="4px" bg="#224AA0" mb={8} />
+        <Box w="60px" h="4px" bg="#224AA0" mb={{ base: 6, md: 8 }} />
       </Box>
 
       {/* Contact Info */}
       <VStack
         align="start"
-        spacing={5}
-        mb={12}
+        spacing={{ base: 4, md: 5 }}
+        mb={{ base: 8, md: 12 }}
         animation={`${fadeSlideUp} 0.6s ease-out 0.1s forwards`}
         opacity={0}
       >
         {info.map(({ label, value }) => (
           <Box key={label}>
-            <Text fontWeight="bold" color="#0a1628" fontSize="md" letterSpacing="wide">
+            <Text fontWeight="bold" color="#0a1628" fontSize={{ base: 'sm', md: 'md' }} letterSpacing="wide">
               {label}
             </Text>
-            <Text color="#1e3a5f" fontSize="lg">{value}</Text>
+            <Text color="#1e3a5f" fontSize={{ base: 'md', md: 'lg' }}>{value}</Text>
           </Box>
         ))}
       </VStack>
@@ -78,7 +78,7 @@ export default function Contact() {
         opacity={0}
       >
         <Heading
-          fontSize="2xl"
+          fontSize={{ base: 'xl', md: '2xl' }}
           fontWeight="900"
           color="#000000"
           letterSpacing="tight"
@@ -90,7 +90,7 @@ export default function Contact() {
 
         <form ref={form} onSubmit={sendEmail}>
           <VStack spacing={4} align="stretch">
-            <Flex gap={4}>
+            <Flex gap={4} direction={{ base: 'column', md: 'row' }}>
               <Input
                 name="first_name"
                 placeholder="First Name"

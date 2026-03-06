@@ -37,8 +37,9 @@ export default function Home() {
         bgSize="50px 50px"
       />
 
-      {/* Floating blurs */}
+      {/* Floating blurs - hidden on mobile */}
       <Box
+        display={{ base: 'none', lg: 'block' }}
         position="absolute"
         top="80px"
         left="40px"
@@ -51,6 +52,7 @@ export default function Home() {
         animation={`${pulse} 3s ease-in-out infinite alternate`}
       />
       <Box
+        display={{ base: 'none', lg: 'block' }}
         position="absolute"
         bottom="120px"
         right="80px"
@@ -70,20 +72,21 @@ export default function Home() {
         align="center"
         justify="center"
         minH="90vh"
-        px={{ base: 6, lg: 16 }}
-        gap={{ base: 10, lg: 16 }}
-        wrap="wrap"
+        px={{ base: 4, md: 6, lg: 16 }}
+        py={{ base: 8, lg: 0 }}
+        gap={{ base: 8, lg: 16 }}
+        direction={{ base: 'column-reverse', lg: 'row' }}
       >
         {/* Left: Text */}
-        <Box maxW="500px">
+        <Box maxW="500px" textAlign={{ base: 'center', lg: 'left' }}>
           {/* Role tags */}
-          <Flex gap={3} mb={6} wrap="wrap">
+          <Flex gap={3} mb={6} wrap="wrap" justify={{ base: 'center', lg: 'flex-start' }}>
             {tags.map((tag, i) => (
               <Box
                 key={tag}
-                px={4}
-                py={2}
-                fontSize="sm"
+                px={{ base: 3, md: 4 }}
+                py={{ base: 1, md: 2 }}
+                fontSize={{ base: 'xs', md: 'sm' }}
                 fontWeight="bold"
                 letterSpacing="widest"
                 border="2px solid"
@@ -100,7 +103,7 @@ export default function Home() {
 
           {/* Name */}
           <Heading
-            fontSize={{ base: '5xl', lg: '8xl' }}
+            fontSize={{ base: '4xl', md: '5xl', lg: '8xl' }}
             fontWeight="900"
             lineHeight="0.95"
             letterSpacing="tighter"
@@ -118,23 +121,26 @@ export default function Home() {
           {/* Tagline */}
           <Text
             mt={6}
-            fontSize="lg"
+            fontSize={{ base: 'md', md: 'lg' }}
             color="#0a1628"
             maxW="400px"
+            mx={{ base: 'auto', lg: 0 }}
             lineHeight={1.7}
             animation={`${fadeSlideUp} 0.6s ease-out 0.4s forwards`}
             opacity={0}
           >
             Game programmer always striving to learn, create, and code more.
-            <Text as="span" display="block" mt={2} fontSize="sm" color="#1e3a5f">
+            <Text as="span" display="block" mt={2} fontSize={{ base: 'xs', md: 'sm' }} color="#1e3a5f">
               UI/Systems Programmer · 16-person team · Shipping May 2026
             </Text>
           </Text>
 
           {/* Buttons */}
           <Flex
-            gap={4}
+            gap={{ base: 2, md: 4 }}
             mt={8}
+            justify={{ base: 'center', lg: 'flex-start' }}
+            wrap="wrap"
             animation={`${fadeSlideUp} 0.6s ease-out 0.5s forwards`}
             opacity={0}
           >
@@ -146,10 +152,10 @@ export default function Home() {
                 onMouseLeave={() => setHoveredBtn(null)}
                 bg={hoveredBtn === btn.label ? btn.hoverBg : btn.bg}
                 color={btn.color}
-                px={6}
-                py={6}
+                px={{ base: 4, md: 6 }}
+                py={{ base: 5, md: 6 }}
                 fontWeight="bold"
-                fontSize="sm"
+                fontSize={{ base: 'xs', md: 'sm' }}
                 letterSpacing="wide"
                 borderRadius="none"
                 clipPath="polygon(8% 0%, 100% 0%, 92% 100%, 0% 100%)"
@@ -205,8 +211,8 @@ export default function Home() {
             <Image
               src={photo}
               alt="Jayden"
-              w="320px"
-              h="400px"
+              w={{ base: '240px', md: '280px', lg: '320px' }}
+              h={{ base: '300px', md: '350px', lg: '400px' }}
               objectFit="cover"
               bg="#e8f0fe"
             />
@@ -219,10 +225,10 @@ export default function Home() {
             left="4px"
             bg="#224AA0"
             color="#FFFFFF"
-            px={4}
-            py={2}
+            px={{ base: 3, md: 4 }}
+            py={{ base: 1, md: 2 }}
             fontWeight="bold"
-            fontSize="xs"
+            fontSize={{ base: '2xs', md: 'xs' }}
             letterSpacing="wider"
             boxShadow="xl"
           >

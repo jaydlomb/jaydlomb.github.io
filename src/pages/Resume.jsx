@@ -9,13 +9,13 @@ const fadeSlideUp = keyframes`
 function Section({ title, delay = 0 }) {
   return (
     <Box
-      mt={10}
+      mt={{ base: 6, md: 10 }}
       mb={4}
       animation={`${fadeSlideUp} 0.6s ease-out ${delay}s forwards`}
       opacity={0}
     >
       <Heading
-        fontSize="2xl"
+        fontSize={{ base: 'xl', md: '2xl' }}
         fontWeight="900"
         color="#000000"
         letterSpacing="tight"
@@ -30,18 +30,18 @@ function Section({ title, delay = 0 }) {
 function Entry({ title, subtitle, location, date, bullets }) {
   return (
     <Box mb={6}>
-      <Flex justify="space-between" align="baseline">
-        <Text fontWeight="bold" color="#0a1628" fontSize="lg">{title}</Text>
-        <Text fontSize="md" color="#1e3a5f">{date}</Text>
+      <Flex justify="space-between" align="baseline" direction={{ base: 'column', md: 'row' }} gap={{ base: 0, md: 2 }}>
+        <Text fontWeight="bold" color="#0a1628" fontSize={{ base: 'md', md: 'lg' }}>{title}</Text>
+        <Text fontSize={{ base: 'sm', md: 'md' }} color="#1e3a5f">{date}</Text>
       </Flex>
-      <Flex justify="space-between" align="baseline">
-        <Text as="i" fontSize="md" color="#1e3a5f">{subtitle}</Text>
-        <Text as="i" fontSize="md" color="#1e3a5f">{location}</Text>
+      <Flex justify="space-between" align="baseline" direction={{ base: 'column', md: 'row' }}>
+        <Text as="i" fontSize={{ base: 'sm', md: 'md' }} color="#1e3a5f">{subtitle}</Text>
+        <Text as="i" fontSize={{ base: 'sm', md: 'md' }} color="#1e3a5f">{location}</Text>
       </Flex>
       {bullets && (
         <List.Root mt={2} pl={4} spacing={1}>
           {bullets.map((b, i) => (
-            <List.Item key={i} fontSize="md" color="#0a1628">
+            <List.Item key={i} fontSize={{ base: 'sm', md: 'md' }} color="#0a1628">
               {b}
             </List.Item>
           ))}
@@ -53,21 +53,21 @@ function Entry({ title, subtitle, location, date, bullets }) {
 
 export default function Resume() {
   return (
-    <Box maxW="800px" mx="auto" py={8}>
+    <Box maxW="800px" mx="auto" py={{ base: 4, lg: 8 }} px={{ base: 2, md: 0 }}>
       {/* Header */}
       <Box
         animation={`${fadeSlideUp} 0.6s ease-out forwards`}
         opacity={0}
       >
         <Heading
-          fontSize="4xl"
+          fontSize={{ base: '2xl', md: '4xl' }}
           fontWeight="900"
           color="#000000"
           letterSpacing="tight"
         >
           Jayden <Text as="span" color="#224AA0">Lombardi</Text>
         </Heading>
-        <Text mt={2} fontSize="xl" color="#0a1628">
+        <Text mt={2} fontSize={{ base: 'md', md: 'xl' }} color="#0a1628">
           jalombardi2004@gmail.com | (518) 502-3680 | Albany, NY
         </Text>
         <Link
@@ -75,7 +75,7 @@ export default function Resume() {
           isExternal
           color="#224AA0"
           fontWeight="bold"
-          fontSize="xl"
+          fontSize={{ base: 'md', md: 'xl' }}
           _hover={{ color: '#1a3a7a' }}
         >
           LinkedIn
@@ -88,15 +88,15 @@ export default function Resume() {
         animation={`${fadeSlideUp} 0.6s ease-out 0.1s forwards`}
         opacity={0}
       >
-        <Flex justify="space-between" align="baseline">
-          <Text color="#0a1628" fontSize="lg">
+        <Flex justify="space-between" align="baseline" direction={{ base: 'column', md: 'row' }}>
+          <Text color="#0a1628" fontSize={{ base: 'md', md: 'lg' }}>
             <Text as="span" fontWeight="bold">Bachelor of Science in Video Game Programming</Text>
           </Text>
-          <Text fontSize="lg" color="#1e3a5f">May 2026</Text>
+          <Text fontSize={{ base: 'md', md: 'lg' }} color="#1e3a5f">May 2026</Text>
         </Flex>
-        <Flex justify="space-between">
-          <Text fontSize="lg" color="#0a1628" fontWeight="bold">Minor in Computer Science</Text>
-          <Text fontSize="lg" color="#1e3a5f">Champlain College, Burlington, VT</Text>
+        <Flex justify="space-between" direction={{ base: 'column', md: 'row' }}>
+          <Text fontSize={{ base: 'md', md: 'lg' }} color="#0a1628" fontWeight="bold">Minor in Computer Science</Text>
+          <Text fontSize={{ base: 'md', md: 'lg' }} color="#1e3a5f">Champlain College, Burlington, VT</Text>
         </Flex>
       </Box>
 
@@ -136,8 +136,8 @@ export default function Resume() {
       {/* Skills */}
       <Section title="Skills" delay={0.25} />
       <SimpleGrid
-        columns={2}
-        spacing={8}
+        columns={{ base: 1, md: 2 }}
+        spacing={{ base: 4, md: 8 }}
         animation={`${fadeSlideUp} 0.6s ease-out 0.3s forwards`}
         opacity={0}
       >
@@ -146,12 +146,12 @@ export default function Resume() {
           { heading: 'Professional', skills: ['User Interface / User Experience', 'Game Programming', 'Game Architecture', 'Agile Methodologies', 'Gameplay Mechanics', 'Communication'] },
         ].map(({ heading, skills }) => (
           <Box key={heading}>
-            <Text fontWeight="bold" mb={2} fontSize="md" color="#0a1628" letterSpacing="wide">
+            <Text fontWeight="bold" mb={2} fontSize={{ base: 'sm', md: 'md' }} color="#0a1628" letterSpacing="wide">
               {heading}
             </Text>
             <List.Root pl={4} spacing={1}>
               {skills.map((s) => (
-                <List.Item key={s} fontSize="md" color="#0a1628">
+                <List.Item key={s} fontSize={{ base: 'sm', md: 'md' }} color="#0a1628">
                   {s}
                 </List.Item>
               ))}
@@ -163,8 +163,8 @@ export default function Resume() {
       {/* Relevant Courses */}
       <Section title="Relevant Courses" delay={0.35} />
       <SimpleGrid
-        columns={3}
-        spacing={6}
+        columns={{ base: 1, md: 3 }}
+        spacing={{ base: 4, md: 6 }}
         animation={`${fadeSlideUp} 0.6s ease-out 0.4s forwards`}
         opacity={0}
       >
@@ -174,12 +174,12 @@ export default function Resume() {
           { heading: 'Math & Fundamentals', courses: ['Data Structures & Algorithms', 'Matrices, Vectors, and 3D Math', 'Discrete Mathematics', 'Linear Algebra', 'Computer Architecture', 'Python Programming', 'Modern Graphics Programming'] },
         ].map(({ heading, courses }) => (
           <Box key={heading}>
-            <Text fontWeight="bold" mb={2} fontSize="md" color="#0a1628" letterSpacing="wide">
+            <Text fontWeight="bold" mb={2} fontSize={{ base: 'sm', md: 'md' }} color="#0a1628" letterSpacing="wide">
               {heading}
             </Text>
             <List.Root pl={4} spacing={1}>
               {courses.map((c) => (
-                <List.Item key={c} fontSize="md" color="#0a1628">
+                <List.Item key={c} fontSize={{ base: 'sm', md: 'md' }} color="#0a1628">
                   {c}
                 </List.Item>
               ))}

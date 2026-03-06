@@ -22,17 +22,18 @@ function ProjectCard({ image, title, description, path, index }) {
 
     return (
         <Flex
-            mb={16}
-            gap={10}
+            mb={{ base: 10, lg: 16 }}
+            gap={{ base: 6, lg: 10 }}
             align="center"
             justify="center"
-            wrap="wrap"
+            direction={{ base: 'column', lg: 'row' }}
             animation={`${fadeSlideUp} 0.6s ease-out ${index * 0.1}s forwards`}
             opacity={0}
         >
             {/* Image */}
             <Box
                 position="relative"
+                w={{ base: '100%', lg: 'auto' }}
                 onMouseEnter={() => setHovered(true)}
                 onMouseLeave={() => setHovered(false)}
             >
@@ -48,16 +49,18 @@ function ProjectCard({ image, title, description, path, index }) {
                     opacity={hovered ? 0.6 : 0.3}
                     transform="rotate(-1deg)"
                     transition="opacity 0.3s"
-                    zIndex={-1}
+                    zIndex={0}
                 />
                 <Image
                     src={image}
                     alt={title}
-                    w="450px"
-                    h="220px"
+                    w={{ base: '100%', lg: '450px' }}
+                    h={{ base: 'auto', lg: '220px' }}
                     objectFit="cover"
                     border="2px solid"
                     borderColor="#0a1628"
+                    position="relative"
+                    zIndex={1}
                     transition="transform 0.3s, box-shadow 0.3s"
                     transform={hovered ? 'scale(1.02)' : 'scale(1)'}
                     boxShadow={hovered ? '0 10px 30px rgba(10,22,40,0.2)' : 'none'}
@@ -65,9 +68,15 @@ function ProjectCard({ image, title, description, path, index }) {
             </Box>
 
             {/* Text */}
-            <Box flex={1} minW="300px" maxW="400px">
-                <Flex justify="space-between" align="center" mb={3}>
-                    <Heading fontSize="2xl" fontWeight="900" color="#000000" letterSpacing="tight">
+            <Box flex={1} w="100%">
+                <Flex 
+                    justify="space-between" 
+                    align={{ base: 'flex-start', md: 'center' }} 
+                    mb={3}
+                    direction={{ base: 'column', md: 'row' }}
+                    gap={{ base: 3, md: 0 }}
+                >
+                    <Heading fontSize={{ base: 'xl', md: '2xl' }} fontWeight="900" color="#000000" letterSpacing="tight">
                         {title}
                     </Heading>
                     <Button
@@ -85,7 +94,7 @@ function ProjectCard({ image, title, description, path, index }) {
                         View More
                     </Button>
                 </Flex>
-                <Text color="#0a1628" lineHeight={1.7} fontSize="lg">
+                <Text color="#0a1628" lineHeight={1.7} fontSize={{ base: 'md', lg: 'lg' }}>
                     {description}
                 </Text>
             </Box>
@@ -100,7 +109,7 @@ function SectionHeader({ children, index }) {
             opacity={0}
         >
             <Heading
-                fontSize="4xl"
+                fontSize={{ base: '2xl', md: '4xl' }}
                 fontWeight="900"
                 color="#000000"
                 letterSpacing="tight"
@@ -108,7 +117,7 @@ function SectionHeader({ children, index }) {
             >
                 {children}
             </Heading>
-            <Box w="60px" h="4px" bg="#224AA0" mb={10} />
+            <Box w="60px" h="4px" bg="#224AA0" mb={{ base: 6, lg: 10 }} />
         </Box>
     )
 }
@@ -157,7 +166,7 @@ export default function Projects() {
     ]
 
     return (
-        <Box maxW="1100px" mx="auto" py={8} px={8}>
+        <Box maxW="1100px" mx="auto" py={{ base: 4, lg: 8 }} px={{ base: 2, md: 8 }}>
             <Box maxW="950px" mx="auto">
                 {/* Games Section */}
                 <SectionHeader index={0}>Games</SectionHeader>
@@ -166,7 +175,7 @@ export default function Projects() {
                 ))}
 
                 {/* Technical Projects Section */}
-                <Box mt={20}>
+                <Box mt={{ base: 12, lg: 20 }}>
                     <SectionHeader index={games.length + 1}>Technical Projects</SectionHeader>
                     {techProjects.map((project, i) => (
                         <ProjectCard key={project.title} {...project} index={games.length + i + 2} />

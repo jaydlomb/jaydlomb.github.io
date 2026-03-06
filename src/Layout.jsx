@@ -16,13 +16,13 @@ export default function Layout() {
     <Box minH="100vh" display="flex" flexDirection="column" bg="#FFFFFF">
 
       {/* Header / Nav */}
-      <Box as="header" bg="#000000" px={10} py={6}>
+      <Box as="header" bg="#000000" px={{ base: 4, md: 10 }} py={{ base: 4, md: 6 }}>
         <Flex justify="space-between" align="center">
           <Box
             as={Link}
             to="/"
             fontWeight="bold"
-            fontSize="2xl"
+            fontSize={{ base: 'lg', md: '2xl' }}
             letterSpacing="tight"
             color="#e8f0fe"
             _hover={{ color: '#224AA0' }}
@@ -32,7 +32,7 @@ export default function Layout() {
             Jayden Lombardi
           </Box>
 
-          <HStack spacing={10}>
+          <HStack spacing={{ base: 4, md: 10 }}>
             {navLinks.map(({ label, to }) => (
               <Box
                 key={to}
@@ -41,7 +41,7 @@ export default function Layout() {
                 position="relative"
                 color={location.pathname === to ? '#224AA0' : '#e8f0fe'}
                 _hover={{ color: '#224AA0' }}
-                fontSize="lg"
+                fontSize={{ base: 'sm', md: 'lg' }}
                 fontWeight="bold"
                 letterSpacing="wide"
                 transition="color 0.3s"
@@ -63,23 +63,28 @@ export default function Layout() {
       </Box>
 
       {/* Page Content */}
-      <Box as="main" flex="1" px={8} py={10} bg="#FFFFFF">
+      <Box as="main" flex="1" px={{ base: 4, md: 8 }} py={{ base: 6, md: 10 }} bg="#FFFFFF">
         <Outlet />
       </Box>
 
       {/* Footer */}
-      <Box as="footer" bg="#000000" px={10} py={10}>
-        <Flex justify="space-between" align="center">
+      <Box as="footer" bg="#000000" px={{ base: 4, md: 10 }} py={{ base: 6, md: 10 }}>
+        <Flex 
+          justify="space-between" 
+          align="center"
+          direction={{ base: 'column', md: 'row' }}
+          gap={{ base: 6, md: 0 }}
+        >
 
           {/* Left - Resume Download */}
-          <Box>
-            <Text fontWeight="bold" color="#e8f0fe" fontSize="md" letterSpacing="wide">
+          <Box textAlign={{ base: 'center', md: 'left' }}>
+            <Text fontWeight="bold" color="#e8f0fe" fontSize={{ base: 'sm', md: 'md' }} letterSpacing="wide">
               Resume
             </Text>
             <a href={resumePDF} download="ResumeJL.pdf">
               <Text
                 color="#3b5998"
-                fontSize="md"
+                fontSize={{ base: 'sm', md: 'md' }}
                 _hover={{ color: '#224AA0' }}
                 cursor="pointer"
                 transition="color 0.3s"
@@ -91,31 +96,31 @@ export default function Layout() {
 
           {/* Center - Social Icons */}
           <Box textAlign="center">
-            <Text color="#e8f0fe" fontWeight="bold" fontSize="md" mb={4} letterSpacing="wide">
+            <Text color="#e8f0fe" fontWeight="bold" fontSize={{ base: 'sm', md: 'md' }} mb={{ base: 2, md: 4 }} letterSpacing="wide">
               Follow Me
             </Text>
-            <HStack spacing={6} justify="center">
+            <HStack spacing={{ base: 4, md: 6 }} justify="center">
               <a href="https://www.linkedin.com/in/jayden-lombardi/" target="_blank" rel="noreferrer">
-                <Box as={FaLinkedin} boxSize="28px" color="#e8f0fe" _hover={{ color: '#224AA0' }} transition="color 0.3s" />
+                <Box as={FaLinkedin} boxSize={{ base: '22px', md: '28px' }} color="#e8f0fe" _hover={{ color: '#224AA0' }} transition="color 0.3s" />
               </a>
               <a href="https://github.com/jaydlomb" target="_blank" rel="noreferrer">
-                <Box as={FaGithub} boxSize="28px" color="#e8f0fe" _hover={{ color: '#224AA0' }} transition="color 0.3s" />
+                <Box as={FaGithub} boxSize={{ base: '22px', md: '28px' }} color="#e8f0fe" _hover={{ color: '#224AA0' }} transition="color 0.3s" />
               </a>
               <a href="https://discordapp.com/users/nyquil8" target="_blank" rel="noreferrer">
-                <Box as={FaDiscord} boxSize="28px" color="#e8f0fe" _hover={{ color: '#224AA0' }} transition="color 0.3s" />
+                <Box as={FaDiscord} boxSize={{ base: '22px', md: '28px' }} color="#e8f0fe" _hover={{ color: '#224AA0' }} transition="color 0.3s" />
               </a>
               <a href="mailto:jalombardi2004@gmail.com">
-                <Box as={FaEnvelope} boxSize="28px" color="#e8f0fe" _hover={{ color: '#224AA0' }} transition="color 0.3s" />
+                <Box as={FaEnvelope} boxSize={{ base: '22px', md: '28px' }} color="#e8f0fe" _hover={{ color: '#224AA0' }} transition="color 0.3s" />
               </a>
             </HStack>
           </Box>
 
           {/* Right - Copyright */}
-          <Box textAlign="right">
-            <Text color="#e8f0fe" fontWeight="bold" fontSize="md">
+          <Box textAlign={{ base: 'center', md: 'right' }}>
+            <Text color="#e8f0fe" fontWeight="bold" fontSize={{ base: 'sm', md: 'md' }}>
               &copy; 2026 Jayden Lombardi
             </Text>
-            <Text color="#3b5998" fontSize="sm">
+            <Text color="#3b5998" fontSize={{ base: 'xs', md: 'sm' }}>
               Powered by React + Chakra
             </Text>
           </Box>

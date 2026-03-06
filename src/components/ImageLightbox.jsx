@@ -14,8 +14,8 @@ export default function ImageLightbox({ src, alt }) {
       >
         <Box
           position="absolute"
-          top="-10px"
-          left="-10px"
+          top={{ base: '-6px', md: '-10px' }}
+          left={{ base: '-6px', md: '-10px' }}
           w="100%"
           h="100%"
           border="2px solid"
@@ -53,12 +53,13 @@ export default function ImageLightbox({ src, alt }) {
             justifyContent="center"
             cursor="pointer"
             onClick={() => setIsOpen(false)}
+            p={{ base: 4, md: 0 }}
           >
             <Image
               src={src}
               alt={alt}
-              maxW="85vw"
-              maxH="85vh"
+              maxW={{ base: '95vw', md: '85vw' }}
+              maxH={{ base: '80vh', md: '85vh' }}
               objectFit="contain"
               border="3px solid"
               borderColor="#224AA0"
@@ -66,11 +67,11 @@ export default function ImageLightbox({ src, alt }) {
             
             <Text
               position="absolute"
-              bottom="30px"
+              bottom={{ base: '16px', md: '30px' }}
               left="50%"
               transform="translateX(-50%)"
               color="#e8f0fe"
-              fontSize="md"
+              fontSize={{ base: 'sm', md: 'md' }}
               fontWeight="bold"
               letterSpacing="wide"
             >
