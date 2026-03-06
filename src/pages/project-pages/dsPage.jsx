@@ -93,7 +93,7 @@ export default function DsPage() {
         <Flex flex={1} align="center" justify="center">
           <Box
             as="iframe"
-            src="https://www.youtube.com/embed/YOUR_VIDEO_ID?vq=hd1080"
+            src="https://www.youtube.com/embed/_lSCxqZHnHU?si=AYnfr-5gvsk0blQ1&vq=hd1080"
             w="100%"
             maxW="700px"
             h={{ base: '250px', md: '400px' }}
