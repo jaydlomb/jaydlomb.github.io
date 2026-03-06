@@ -35,8 +35,10 @@ export default function SnowboardFreePage() {
           <Box w="60px" h="4px" bg="#224AA0" mb={6} />
 
           <Text color="#0a1628" fontSize={{ base: 'md', lg: 'lg' }} lineHeight={1.8} mb={8}>
-            My take on the 1991 game 'Ski-Free', except with a snowboard. Carve through endless snowy terrain,
-            dodging obstacles and seeing how long you can survive before disaster strikes!
+
+            A nostalgic tribute to the 1991 'SkiFree', Snowboard Free is a similar game, yet with a snowboard! 
+            Dodge obstacles, carve through the snow, and see how far you can make it! Watch out for lurking skiers.. 
+            who make use of the old ski-free sprite, they will attempt to take you down.
           </Text>
 
           <Button
@@ -68,22 +70,22 @@ export default function SnowboardFreePage() {
 
           <Text fontWeight="bold" color="#0a1628" mb={1} fontSize={{ base: 'sm', md: 'md' }}>Platform</Text>
           <List.Root pl={4} spacing={1} mb={5}>
-            <List.Item color="#1e3a5f" fontSize={{ base: 'sm', md: 'md' }}>Windows</List.Item>
+            <List.Item color="#1e3a5f" fontSize={{ base: 'sm', md: 'md' }}>Windows, Mac, and Web</List.Item>
           </List.Root>
 
           <Text fontWeight="bold" color="#0a1628" mb={1} fontSize={{ base: 'sm', md: 'md' }}>Developers</Text>
           <List.Root pl={4} spacing={1} mb={5}>
-            <List.Item color="#1e3a5f" fontSize={{ base: 'sm', md: 'md' }}>Programmer - Jayden Lombardi</List.Item>
+            <List.Item color="#1e3a5f" fontSize={{ base: 'sm', md: 'md' }}>Solo Dev - Jayden Lombardi</List.Item>
           </List.Root>
 
           <Text fontWeight="bold" color="#0a1628" mb={1} fontSize={{ base: 'sm', md: 'md' }}>Technology</Text>
           <List.Root pl={4} spacing={1} mb={5}>
-            <List.Item color="#1e3a5f" fontSize={{ base: 'sm', md: 'md' }}>Unity, C#</List.Item>
+            <List.Item color="#1e3a5f" fontSize={{ base: 'sm', md: 'md' }}>Unity, C#, PixilArt</List.Item>
           </List.Root>
 
           <Text fontWeight="bold" color="#0a1628" mb={1} fontSize={{ base: 'sm', md: 'md' }}>Duration</Text>
           <List.Root pl={4} spacing={1}>
-            <List.Item color="#1e3a5f" fontSize={{ base: 'sm', md: 'md' }}>Solo Project</List.Item>
+            <List.Item color="#1e3a5f" fontSize={{ base: 'sm', md: 'md' }}>12 Weeks</List.Item>
           </List.Root>
         </Box>
 
@@ -107,7 +109,14 @@ export default function SnowboardFreePage() {
           <Heading fontSize={{ base: 'lg', md: '2xl' }} fontWeight="900" color="#000000" letterSpacing="tight" mb={2}>Responsibilities</Heading>
           <Box w="40px" h="3px" bg="#224AA0" mb={6} />
           <List.Root pl={4} spacing={2}>
-            <List.Item color="#0a1628" fontSize={{ base: 'sm', md: 'md' }}>Implemented player movement and attacking</List.Item>
+            <List.Item color="#0a1628" fontSize={{ base: 'sm', md: 'md' }}>Solo Dev Project</List.Item>
+            <List.Item color="#0a1628" fontSize={{ base: 'sm', md: 'md' }}>Implementing dynamic UI​</List.Item>
+            <List.Item color="#0a1628" fontSize={{ base: 'sm', md: 'md' }}>Implementing pathfinding skiers</List.Item>
+            <List.Item color="#0a1628" fontSize={{ base: 'sm', md: 'md' }}>Implementing random obstacle placement</List.Item>
+            <List.Item color="#0a1628" fontSize={{ base: 'sm', md: 'md' }}>Implementing basic Unity scene switching</List.Item>
+            <List.Item color="#0a1628" fontSize={{ base: 'sm', md: 'md' }}>Creating pixel art assets for the entire game</List.Item>
+            <List.Item color="#0a1628" fontSize={{ base: 'sm', md: 'md' }}>Creating 12 week development plan to follow</List.Item>
+            <List.Item color="#0a1628" fontSize={{ base: 'sm', md: 'md' }}>Testing game and iterating on feedback received</List.Item>
           </List.Root>
         </Box>
 
@@ -115,7 +124,11 @@ export default function SnowboardFreePage() {
           <Heading fontSize={{ base: 'lg', md: '2xl' }} fontWeight="900" color="#000000" letterSpacing="tight" mb={2}>Future Changes</Heading>
           <Box w="40px" h="3px" bg="#224AA0" mb={6} />
           <List.Root pl={4} spacing={2}>
-            <List.Item color="#0a1628" fontSize={{ base: 'sm', md: 'md' }}>Better structure with the scripts</List.Item>
+            <List.Item color="#0a1628" fontSize={{ base: 'sm', md: 'md' }}>Pause menu UI with an options tab that can be changed</List.Item>
+            <List.Item color="#0a1628" fontSize={{ base: 'sm', md: 'md' }}>Global leaderboard with networking</List.Item>
+            <List.Item color="#0a1628" fontSize={{ base: 'sm', md: 'md' }}>Jumping system - Adding verticality</List.Item>
+            <List.Item color="#0a1628" fontSize={{ base: 'sm', md: 'md' }}>Point system complete with rails, grinding, jumps + flips</List.Item>
+            <List.Item color="#0a1628" fontSize={{ base: 'sm', md: 'md' }}>Similar tricks to Tony Hawk Skate games</List.Item>
           </List.Root>
         </Box>
       </Flex>

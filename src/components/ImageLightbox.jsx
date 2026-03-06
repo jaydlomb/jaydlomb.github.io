@@ -58,13 +58,14 @@ export default function ImageLightbox({ src, alt }) {
             <Image
               src={src}
               alt={alt}
-              maxW={{ base: '95vw', md: '85vw' }}
-              maxH={{ base: '80vh', md: '85vh' }}
+              w="80vw"
+              maxW="80vw"
+              maxH="80vh"
               objectFit="contain"
               border="3px solid"
               borderColor="#224AA0"
             />
-            
+
             <Text
               position="absolute"
               bottom={{ base: '16px', md: '30px' }}

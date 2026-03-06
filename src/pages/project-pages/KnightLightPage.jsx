@@ -35,9 +35,10 @@ export default function KnightLightPage() {
           <Box w="60px" h="4px" bg="#224AA0" mb={6} />
 
           <Text color="#0a1628" fontSize={{ base: 'md', lg: 'lg' }} lineHeight={1.8} mb={8}>
-            A 'Dark-Souls-Esc' boss fight where a player must defeat a three-segmented dragon,
-            each with unique properties and attack styles. A top-down fighting game focused on
-            players looking for tense and interesting boss fights.
+            Knight light is a top-down fighting game focused at players looking for tense and interesting boss fights. 
+            It takes place in a dark world in which a dark dragon resides, the knight of light must defeat him to 
+            cleanse the plain of darkness. The player should feel as if they are gaining leverage while fighting 
+            through their battle as their fight pushes back the darkness imposed by the foes they fight.
           </Text>
 
           <Button
@@ -69,12 +70,17 @@ export default function KnightLightPage() {
 
           <Text fontWeight="bold" color="#0a1628" mb={1} fontSize={{ base: 'sm', md: 'md' }}>Platform</Text>
           <List.Root pl={4} spacing={1} mb={5}>
-            <List.Item color="#1e3a5f" fontSize={{ base: 'sm', md: 'md' }}>Windows</List.Item>
+            <List.Item color="#1e3a5f" fontSize={{ base: 'sm', md: 'md' }}>Windows, Mac, and Web</List.Item>
           </List.Root>
 
           <Text fontWeight="bold" color="#0a1628" mb={1} fontSize={{ base: 'sm', md: 'md' }}>Developers</Text>
           <List.Root pl={4} spacing={1} mb={5}>
             <List.Item color="#1e3a5f" fontSize={{ base: 'sm', md: 'md' }}>Programmer - Jayden Lombardi</List.Item>
+            <List.Item color="#1e3a5f" fontSize={{ base: 'sm', md: 'md' }}>Artist - Ann McMullen</List.Item>
+            <List.Item color="#1e3a5f" fontSize={{ base: 'sm', md: 'md' }}>Artist - Coleman FitzGerald</List.Item>
+            <List.Item color="#1e3a5f" fontSize={{ base: 'sm', md: 'md' }}>Production - Elara Spiller</List.Item>
+            <List.Item color="#1e3a5f" fontSize={{ base: 'sm', md: 'md' }}>Designer - Alexander Cowell</List.Item>
+            <List.Item color="#1e3a5f" fontSize={{ base: 'sm', md: 'md' }}>Sound Designer - Luca Petrosso</List.Item>
           </List.Root>
 
           <Text fontWeight="bold" color="#0a1628" mb={1} fontSize={{ base: 'sm', md: 'md' }}>Technology</Text>
@@ -84,7 +90,7 @@ export default function KnightLightPage() {
 
           <Text fontWeight="bold" color="#0a1628" mb={1} fontSize={{ base: 'sm', md: 'md' }}>Duration</Text>
           <List.Root pl={4} spacing={1}>
-            <List.Item color="#1e3a5f" fontSize={{ base: 'sm', md: 'md' }}>Solo Project</List.Item>
+            <List.Item color="#1e3a5f" fontSize={{ base: 'sm', md: 'md' }}>6 Weeks</List.Item>
           </List.Root>
         </Box>
 
@@ -108,7 +114,15 @@ export default function KnightLightPage() {
           <Heading fontSize={{ base: 'lg', md: '2xl' }} fontWeight="900" color="#000000" letterSpacing="tight" mb={2}>Responsibilities</Heading>
           <Box w="40px" h="3px" bg="#224AA0" mb={6} />
           <List.Root pl={4} spacing={2}>
+            <List.Item color="#0a1628" fontSize={{ base: 'sm', md: 'md' }}>Lead/Sole Programmer</List.Item>
             <List.Item color="#0a1628" fontSize={{ base: 'sm', md: 'md' }}>Implemented player movement and attacking</List.Item>
+            <List.Item color="#0a1628" fontSize={{ base: 'sm', md: 'md' }}>Implemented dragon segment movement and attacking</List.Item>
+            <List.Item color="#0a1628" fontSize={{ base: 'sm', md: 'md' }}>Implemented premade animations on character and dragon</List.Item>
+            <List.Item color="#0a1628" fontSize={{ base: 'sm', md: 'md' }}>Implemented basic UI for player and dragon health</List.Item>
+            <List.Item color="#0a1628" fontSize={{ base: 'sm', md: 'md' }}>Implemented player and dragon interactions</List.Item>
+            <List.Item color="#0a1628" fontSize={{ base: 'sm', md: 'md' }}>Used feedback from various testing sessions to improve on mechanics and game feel​</List.Item>
+            <List.Item color="#0a1628" fontSize={{ base: 'sm', md: 'md' }}>Created and upkept a Technical Plan and Systems + Mechanics List</List.Item>
+            <List.Item color="#0a1628" fontSize={{ base: 'sm', md: 'md' }}>Led the team Git, handling merges and conflicts</List.Item>
           </List.Root>
         </Box>
 
@@ -117,6 +131,9 @@ export default function KnightLightPage() {
           <Box w="40px" h="3px" bg="#224AA0" mb={6} />
           <List.Root pl={4} spacing={2}>
             <List.Item color="#0a1628" fontSize={{ base: 'sm', md: 'md' }}>Better structure with the scripts</List.Item>
+            <List.Item color="#0a1628" fontSize={{ base: 'sm', md: 'md' }}>Better pathfinding on dragon segments</List.Item>
+            <List.Item color="#0a1628" fontSize={{ base: 'sm', md: 'md' }}>Better game feel with more testing and feedback</List.Item>
+            <List.Item color="#0a1628" fontSize={{ base: 'sm', md: 'md' }}>Increasing difficulty as dragon segments are defeated</List.Item>
           </List.Root>
         </Box>
       </Flex>

@@ -71,29 +71,29 @@ export default function DsPage() {
 
           <Text fontWeight="bold" color="#0a1628" mb={1} fontSize={{ base: 'sm', md: 'md' }}>Platform</Text>
           <List.Root pl={4} spacing={1} mb={5}>
-            <List.Item color="#1e3a5f" fontSize={{ base: 'sm', md: 'md' }}>Nintendo 3DS</List.Item>
+            <List.Item color="#1e3a5f" fontSize={{ base: 'sm', md: 'md' }}>Nintendo 3DS, Citra Emulator</List.Item>
           </List.Root>
 
           <Text fontWeight="bold" color="#0a1628" mb={1} fontSize={{ base: 'sm', md: 'md' }}>Developers</Text>
           <List.Root pl={4} spacing={1} mb={5}>
-            <List.Item color="#1e3a5f" fontSize={{ base: 'sm', md: 'md' }}>Programmer - Jayden Lombardi</List.Item>
+            <List.Item color="#1e3a5f" fontSize={{ base: 'sm', md: 'md' }}>Solo Dev - Jayden Lombardi</List.Item>
           </List.Root>
 
           <Text fontWeight="bold" color="#0a1628" mb={1} fontSize={{ base: 'sm', md: 'md' }}>Technology</Text>
           <List.Root pl={4} spacing={1} mb={5}>
-            <List.Item color="#1e3a5f" fontSize={{ base: 'sm', md: 'md' }}>C, devkitPro, libctru</List.Item>
+            <List.Item color="#1e3a5f" fontSize={{ base: 'sm', md: 'md' }}>Nintendo 3DS, Citra Emulator, Visual Studios, C, DevkitPro, DevkitARM</List.Item>
           </List.Root>
 
           <Text fontWeight="bold" color="#0a1628" mb={1} fontSize={{ base: 'sm', md: 'md' }}>Duration</Text>
           <List.Root pl={4} spacing={1}>
-            <List.Item color="#1e3a5f" fontSize={{ base: 'sm', md: 'md' }}>Final Project - Computer Architecture</List.Item>
+            <List.Item color="#1e3a5f" fontSize={{ base: 'sm', md: 'md' }}>4-5 Weeks</List.Item>
           </List.Root>
         </Box>
 
         <Flex flex={1} align="center" justify="center">
           <Box
             as="iframe"
-            src="https://www.youtube.com/embed/_lSCxqZHnHU?si=AYnfr-5gvsk0blQ1&vq=hd1080"
+            src="https://www.youtube.com/embed/_lSCxqZHnHU?si=AYnfr-5gvsk0blQ1?vq=hd1080"
             w="100%"
             maxW="700px"
             h={{ base: '250px', md: '400px' }}
@@ -110,6 +110,11 @@ export default function DsPage() {
           <Heading fontSize={{ base: 'lg', md: '2xl' }} fontWeight="900" color="#000000" letterSpacing="tight" mb={2}>Responsibilities</Heading>
           <Box w="40px" h="3px" bg="#224AA0" mb={6} />
           <List.Root pl={4} spacing={2}>
+            <List.Item color="#0a1628" fontSize={{ base: 'sm', md: 'md' }}>Final Project - Computer Architecture</List.Item>
+            <List.Item color="#0a1628" fontSize={{ base: 'sm', md: 'md' }}>Linking C code to a 3DS</List.Item>
+            <List.Item color="#0a1628" fontSize={{ base: 'sm', md: 'md' }}>Learning and using devkitpro to help code implementation</List.Item>
+            <List.Item color="#0a1628" fontSize={{ base: 'sm', md: 'md' }}>Jailbreaking a 3DS and loading the project onto the SD card</List.Item>
+            <List.Item color="#0a1628" fontSize={{ base: 'sm', md: 'md' }}>Learning how to wireless network transfer to 3DS</List.Item>
             <List.Item color="#0a1628" fontSize={{ base: 'sm', md: 'md' }}>Researched 3DS architecture and homebrew development</List.Item>
             <List.Item color="#0a1628" fontSize={{ base: 'sm', md: 'md' }}>Implemented touch screen drawing functionality</List.Item>
             <List.Item color="#0a1628" fontSize={{ base: 'sm', md: 'md' }}>Wrote 8-page research document</List.Item>
@@ -120,23 +125,14 @@ export default function DsPage() {
           <Heading fontSize={{ base: 'lg', md: '2xl' }} fontWeight="900" color="#000000" letterSpacing="tight" mb={2}>Future Changes</Heading>
           <Box w="40px" h="3px" bg="#224AA0" mb={6} />
           <List.Root pl={4} spacing={2}>
-            <List.Item color="#0a1628" fontSize={{ base: 'sm', md: 'md' }}>Add more interactive features</List.Item>
+            <List.Item color="#0a1628" fontSize={{ base: 'sm', md: 'md' }}>Adding movement functionality so players can move a sprite on the screen</List.Item>
             <List.Item color="#0a1628" fontSize={{ base: 'sm', md: 'md' }}>Explore 3D rendering capabilities</List.Item>
+            <List.Item color="#0a1628" fontSize={{ base: 'sm', md: 'md' }}>Learning how to use the 3D aspect of the top screen on the 3DS</List.Item>
+            <List.Item color="#0a1628" fontSize={{ base: 'sm', md: 'md' }}>Adding functionality to the bumpers on the back of the 3ds</List.Item>
+            <List.Item color="#0a1628" fontSize={{ base: 'sm', md: 'md' }}>Adding functionality to the joystick</List.Item>
           </List.Root>
         </Box>
       </Flex>
-
-      {/* Gallery */}
-      <Box animation={`${fadeSlideUp} 0.6s ease-out 0.3s forwards`} opacity={0}>
-        <Heading fontSize={{ base: 'lg', md: '2xl' }} fontWeight="900" color="#000000" letterSpacing="tight" mb={2}>Gallery</Heading>
-        <Box w="40px" h="3px" bg="#224AA0" mb={8} />
-        <Flex gap={{ base: 4, md: 6 }} wrap="wrap" justify="center">
-          {[1, 2, 3].map((i) => (
-            <ImageLightbox key={i} src="https://via.placeholder.com/400x225" alt={`Screenshot ${i}`} />
-          ))}
-        </Flex>
-      </Box>
-
     </Box>
   )
 }

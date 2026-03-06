@@ -35,9 +35,10 @@ export default function VirusVenturePage() {
           <Box w="60px" h="4px" bg="#224AA0" mb={6} />
 
           <Text color="#0a1628" fontSize={{ base: 'md', lg: 'lg' }} lineHeight={1.8} mb={8}>
-            A simple educational platformer, focused on delivering lessons about internet safety through narrative.
-            Targets children's familiar topics of interest. Focused on teaching children 8 to 12 years old how to be safe on the internet,
-            and maintain their protection.
+            Virus Venture is a simple, educational platformer game that aims to teach children around the 
+            3rd-5th grade level about the dangers of the internet. This game would be played in a classroom 
+            environment likely on chrome books or computers. The player adventures through a digital world, 
+            defeating viruses and learning basic internet safety skills in order to return to the real world.
           </Text>
 
           <Button
@@ -69,22 +70,27 @@ export default function VirusVenturePage() {
 
           <Text fontWeight="bold" color="#0a1628" mb={1} fontSize={{ base: 'sm', md: 'md' }}>Platform</Text>
           <List.Root pl={4} spacing={1} mb={5}>
-            <List.Item color="#1e3a5f" fontSize={{ base: 'sm', md: 'md' }}>Windows</List.Item>
+            <List.Item color="#1e3a5f" fontSize={{ base: 'sm', md: 'md' }}>Windows, Mac, and Web</List.Item>
           </List.Root>
 
           <Text fontWeight="bold" color="#0a1628" mb={1} fontSize={{ base: 'sm', md: 'md' }}>Developers</Text>
           <List.Root pl={4} spacing={1} mb={5}>
             <List.Item color="#1e3a5f" fontSize={{ base: 'sm', md: 'md' }}>Programmer - Jayden Lombardi</List.Item>
+            <List.Item color="#1e3a5f" fontSize={{ base: 'sm', md: 'md' }}>Programmer - Sierra Blume</List.Item>
+            <List.Item color="#1e3a5f" fontSize={{ base: 'sm', md: 'md' }}>Artist - Aidan Matschiner</List.Item>
+            <List.Item color="#1e3a5f" fontSize={{ base: 'sm', md: 'md' }}>Artist - Darla Nordstrom</List.Item>
+            <List.Item color="#1e3a5f" fontSize={{ base: 'sm', md: 'md' }}>Designer/Production - Jorge Avila</List.Item>
+            <List.Item color="#1e3a5f" fontSize={{ base: 'sm', md: 'md' }}>Sound Design - Luca Petrosso</List.Item>
           </List.Root>
 
           <Text fontWeight="bold" color="#0a1628" mb={1} fontSize={{ base: 'sm', md: 'md' }}>Technology</Text>
           <List.Root pl={4} spacing={1} mb={5}>
-            <List.Item color="#1e3a5f" fontSize={{ base: 'sm', md: 'md' }}>Unity, C#</List.Item>
+            <List.Item color="#1e3a5f" fontSize={{ base: 'sm', md: 'md' }}>Unity, C#, Itch, Visual Studios, BitBucket</List.Item>
           </List.Root>
 
           <Text fontWeight="bold" color="#0a1628" mb={1} fontSize={{ base: 'sm', md: 'md' }}>Duration</Text>
           <List.Root pl={4} spacing={1}>
-            <List.Item color="#1e3a5f" fontSize={{ base: 'sm', md: 'md' }}>Solo Project</List.Item>
+            <List.Item color="#1e3a5f" fontSize={{ base: 'sm', md: 'md' }}>6 Weeks</List.Item>
           </List.Root>
         </Box>
 
@@ -108,7 +114,15 @@ export default function VirusVenturePage() {
           <Heading fontSize={{ base: 'lg', md: '2xl' }} fontWeight="900" color="#000000" letterSpacing="tight" mb={2}>Responsibilities</Heading>
           <Box w="40px" h="3px" bg="#224AA0" mb={6} />
           <List.Root pl={4} spacing={2}>
-            <List.Item color="#0a1628" fontSize={{ base: 'sm', md: 'md' }}>Implemented player movement and attacking</List.Item>
+            <List.Item color="#0a1628" fontSize={{ base: 'sm', md: 'md' }}>Lead Programmer</List.Item>
+            <List.Item color="#0a1628" fontSize={{ base: 'sm', md: 'md' }}>Implementing player movement and powerups</List.Item>
+            <List.Item color="#0a1628" fontSize={{ base: 'sm', md: 'md' }}>Implementing a basic dialogue system </List.Item>
+            <List.Item color="#0a1628" fontSize={{ base: 'sm', md: 'md' }}>Implementing a 'Helldivers-esc' input system for challenges</List.Item>
+            <List.Item color="#0a1628" fontSize={{ base: 'sm', md: 'md' }}>Implementing UI to match the previously mentioned system​</List.Item>
+            <List.Item color="#0a1628" fontSize={{ base: 'sm', md: 'md' }}>Implementing basic unity Scene management</List.Item>
+            <List.Item color="#0a1628" fontSize={{ base: 'sm', md: 'md' }}>Used feedback from various testing sessions to improve on mechanics and game feel​</List.Item>
+            <List.Item color="#0a1628" fontSize={{ base: 'sm', md: 'md' }}>Created and upkept a Technical Plan and Systems + Mechanics List</List.Item>
+            <List.Item color="#0a1628" fontSize={{ base: 'sm', md: 'md' }}>Led the team Git, handling merges and conflicts</List.Item>
           </List.Root>
         </Box>
 
@@ -116,7 +130,10 @@ export default function VirusVenturePage() {
           <Heading fontSize={{ base: 'lg', md: '2xl' }} fontWeight="900" color="#000000" letterSpacing="tight" mb={2}>Future Changes</Heading>
           <Box w="40px" h="3px" bg="#224AA0" mb={6} />
           <List.Root pl={4} spacing={2}>
-            <List.Item color="#0a1628" fontSize={{ base: 'sm', md: 'md' }}>Better structure with the scripts</List.Item>
+            <List.Item color="#0a1628" fontSize={{ base: 'sm', md: 'md' }}>Fixing the current or Implementing new dialogue system (not a good structure currently)</List.Item>
+            <List.Item color="#0a1628" fontSize={{ base: 'sm', md: 'md' }}>Fixing the input challenges </List.Item>
+            <List.Item color="#0a1628" fontSize={{ base: 'sm', md: 'md' }}>Fixing overall code structure and look, so it is more accessible to designers</List.Item>
+            <List.Item color="#0a1628" fontSize={{ base: 'sm', md: 'md' }}>Fixing player jump (slight bug right now)</List.Item>
           </List.Root>
         </Box>
       </Flex>

@@ -35,10 +35,10 @@ export default function GOAPPage() {
           <Box w="60px" h="4px" bg="#224AA0" mb={6} />
 
           <Text color="#0a1628" fontSize={{ base: 'md', lg: 'lg' }} lineHeight={1.8} mb={8}>
-            A duo project and research paper created for our final in Game AI class.
-            Chose one of the hardest AI mechanics to implement, using Unity and NavMeshes.
-            Technique was implemented with medium bugs. Not currently working 100% correctly, but on the right path.
-            Would love to continue this and fix the bugs in the near future.
+            A DUO research project and basic implementation of Goal Oriented Action Planning. 
+            Complete with a 8-page research document. One of the hardest mechanics of Game Artificial Intelligence to implement. 
+            Currently quite buggy, the functionality of the code is there, yet is not portrayed within the scene. 
+            Used in F.E.A.R. games.
           </Text>
 
           <Button
@@ -75,8 +75,8 @@ export default function GOAPPage() {
 
           <Text fontWeight="bold" color="#0a1628" mb={1} fontSize={{ base: 'sm', md: 'md' }}>Developers</Text>
           <List.Root pl={4} spacing={1} mb={5}>
-            <List.Item color="#1e3a5f" fontSize={{ base: 'sm', md: 'md' }}>Programmer - Jayden Lombardi</List.Item>
-            <List.Item color="#1e3a5f" fontSize={{ base: 'sm', md: 'md' }}>Programmer - Partner</List.Item>
+            <List.Item color="#1e3a5f" fontSize={{ base: 'sm', md: 'md' }}>Programmer/Research - Jayden Lombardi</List.Item>
+            <List.Item color="#1e3a5f" fontSize={{ base: 'sm', md: 'md' }}>Programmer/Research - Drew Herlocher</List.Item>
           </List.Root>
 
           <Text fontWeight="bold" color="#0a1628" mb={1} fontSize={{ base: 'sm', md: 'md' }}>Technology</Text>
@@ -86,7 +86,7 @@ export default function GOAPPage() {
 
           <Text fontWeight="bold" color="#0a1628" mb={1} fontSize={{ base: 'sm', md: 'md' }}>Duration</Text>
           <List.Root pl={4} spacing={1}>
-            <List.Item color="#1e3a5f" fontSize={{ base: 'sm', md: 'md' }}>Final Project - Game AI Class</List.Item>
+            <List.Item color="#1e3a5f" fontSize={{ base: 'sm', md: 'md' }}>3/4 Weeks</List.Item>
           </List.Root>
         </Box>
 
@@ -111,8 +111,10 @@ export default function GOAPPage() {
           <Box w="40px" h="3px" bg="#224AA0" mb={6} />
           <List.Root pl={4} spacing={2}>
             <List.Item color="#0a1628" fontSize={{ base: 'sm', md: 'md' }}>Implemented GOAP architecture</List.Item>
-            <List.Item color="#0a1628" fontSize={{ base: 'sm', md: 'md' }}>Integrated NavMesh for pathfinding</List.Item>
-            <List.Item color="#0a1628" fontSize={{ base: 'sm', md: 'md' }}>Co-authored research paper</List.Item>
+            <List.Item color="#0a1628" fontSize={{ base: 'sm', md: 'md' }}>Tasked with bug fixing and implementation</List.Item>
+            <List.Item color="#0a1628" fontSize={{ base: 'sm', md: 'md' }}>Heavy research and studying on GOAP</List.Item>
+            <List.Item color="#0a1628" fontSize={{ base: 'sm', md: 'md' }}>Creating and fixing the Planner used by agents within GOAP</List.Item>
+            <List.Item color="#0a1628" fontSize={{ base: 'sm', md: 'md' }}>Big fixing agent goals</List.Item>
           </List.Root>
         </Box>
 
@@ -120,23 +122,13 @@ export default function GOAPPage() {
           <Heading fontSize={{ base: 'lg', md: '2xl' }} fontWeight="900" color="#000000" letterSpacing="tight" mb={2}>Future Changes</Heading>
           <Box w="40px" h="3px" bg="#224AA0" mb={6} />
           <List.Root pl={4} spacing={2}>
-            <List.Item color="#0a1628" fontSize={{ base: 'sm', md: 'md' }}>Fix remaining bugs in action planning</List.Item>
+            <List.Item color="#0a1628" fontSize={{ base: 'sm', md: 'md' }}>Fixing the bugs within the code so the script works accordingly​</List.Item>
+            <List.Item color="#0a1628" fontSize={{ base: 'sm', md: 'md' }}>Fixing the Planner used by Agents to return a feasible plan</List.Item>
+            <List.Item color="#0a1628" fontSize={{ base: 'sm', md: 'md' }}>Fixing the goal setting and following used by Agents</List.Item>
             <List.Item color="#0a1628" fontSize={{ base: 'sm', md: 'md' }}>Add more complex goal states</List.Item>
           </List.Root>
         </Box>
       </Flex>
-
-      {/* Gallery */}
-      <Box animation={`${fadeSlideUp} 0.6s ease-out 0.3s forwards`} opacity={0}>
-        <Heading fontSize={{ base: 'lg', md: '2xl' }} fontWeight="900" color="#000000" letterSpacing="tight" mb={2}>Gallery</Heading>
-        <Box w="40px" h="3px" bg="#224AA0" mb={8} />
-        <Flex gap={{ base: 4, md: 6 }} wrap="wrap" justify="center">
-          {[1, 2, 3].map((i) => (
-            <ImageLightbox key={i} src="https://via.placeholder.com/400x225" alt={`Screenshot ${i}`} />
-          ))}
-        </Flex>
-      </Box>
-
     </Box>
   )
 }

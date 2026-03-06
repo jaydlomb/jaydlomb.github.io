@@ -2,7 +2,13 @@ import { useState } from 'react'
 import { Box, Flex, Text, Button, Heading, List } from '@chakra-ui/react'
 import { keyframes } from '@emotion/react'
 import ImageLightbox from '../../components/ImageLightbox'
+import GalleryGrid from '../../components/GalleryGrid'
 import chyma from '../../assets/images/chyma.png'
+import chyma1 from '../../assets/images/chyma1.png'
+import chyma2 from '../../assets/images/chyma2.png'
+import chyma3gif from '../../assets/images/chyma3.gif'
+import chyma3 from '../../assets/images/chyma3.png'
+import chyma4 from '../../assets/images/chyma4.png'
 
 const fadeSlideUp = keyframes`
   from { opacity: 0; transform: translateY(20px); }
@@ -98,7 +104,7 @@ export default function ChymaPage() {
         <Flex flex={1} align="center" justify="center">
           <Box
             as="iframe"
-            src="https://www.youtube.com/embed/KbsOiDkxuWM?si=FCZXFE6e4_xVjw-5&vq=hd1080"
+            src="https://www.youtube.com/embed/KbsOiDkxuWM?si=FCZXFE6e4_xVjw-5?vq=hd1080"
             w="100%"
             maxW="700px"
             h={{ base: '250px', md: '400px' }}
@@ -141,13 +147,14 @@ export default function ChymaPage() {
       <Box animation={`${fadeSlideUp} 0.6s ease-out 0.3s forwards`} opacity={0}>
         <Heading fontSize={{ base: 'lg', md: '2xl' }} fontWeight="900" color="#000000" letterSpacing="tight" mb={2}>Gallery</Heading>
         <Box w="40px" h="3px" bg="#224AA0" mb={8} />
-        <Flex gap={{ base: 4, md: 6 }} wrap="wrap" justify="center">
-          {[1, 2, 3].map((i) => (
-            <ImageLightbox key={i} src="https://via.placeholder.com/400x225" alt={`Screenshot ${i}`} />
-          ))}
-        </Flex>
+        <GalleryGrid images={[
+          { src: chyma1, alt: 'Screenshot 1' },
+          { src: chyma2, alt: 'Screenshot 2' },
+          { src: chyma3, alt: 'GIF 1' },
+          { src: chyma3gif, alt: 'Screenshot 3' },
+          { src: chyma4, alt: 'Screenshot 4' },
+        ]} />
       </Box>
-
     </Box>
   )
 }
