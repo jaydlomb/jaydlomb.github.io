@@ -1,24 +1,40 @@
-import { Box, Flex, Image, Text, Button, Heading, List } from '@chakra-ui/react'
+import { useState } from 'react'
+import { Box, Flex, Text, Button, Heading, List } from '@chakra-ui/react'
+import { keyframes } from '@emotion/react'
+import ImageLightbox from '../../components/ImageLightbox'
 import chyma from '../../assets/images/chyma.png'
 
-export default function ChymaPage() {
-  return (
-    <Box maxW="1400px" mx="auto" mt={10} px={4}>
+const fadeSlideUp = keyframes`
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+`
 
-      {/* First white box - Image and description */}
-      <Flex bg="white" borderRadius="md" overflow="hidden" minH="400px">
-        <Box flex={1}>
-          <Image
-            src={chyma}
-            alt="Knight Light"
-            width="100%"
-            height="100%"
-            objectFit="cover"
-          />
+export default function ChymaPage() {
+  const [btnHovered, setBtnHovered] = useState(false)
+
+  return (
+    <Box maxW="1200px" mx="auto" py={10} px={6}>
+
+      {/* Hero Section */}
+      <Flex
+        gap={10}
+        align="center"
+        wrap="wrap"
+        mb={16}
+        animation={`${fadeSlideUp} 0.6s ease-out forwards`}
+        opacity={0}
+      >
+        <Box flex={1} minW="400px">
+          <ImageLightbox src={chyma} alt="Chyma and the Toll of Time" />
         </Box>
 
-        <Flex flex={1} direction="column" justify="center" align="center" p={10}>
-          <Text textAlign="center" maxW="400px" mb={8}>
+        <Box flex={1} minW="300px">
+          <Heading fontSize="4xl" fontWeight="900" color="#000000" letterSpacing="tight" mb={2}>
+            Chyma and the <Text as="span" color="#224AA0">Toll of Time</Text>
+          </Heading>
+          <Box w="60px" h="4px" bg="#224AA0" mb={6} />
+
+          <Text color="#0a1628" fontSize="lg" lineHeight={1.8} mb={8}>
             In Chyma and the Toll of Time, you'll play as the titular Chyma,
             a little bell trying to unravel the story of his people to save the planet.
             Chyma wields the power of the Reverb, allowing him to create a copy of himself
@@ -28,108 +44,100 @@ export default function ChymaPage() {
 
           <Button
             as="a"
-            href="https://github.com/jaydlomb/KnighLight"
+            href="https://github.com/jaydlomb/Chyma"
             target="_blank"
-            bg="goldenrod"
-            color="black"
-            _hover={{ bg: 'blue' }}
+            bg={btnHovered ? '#1a3a7a' : '#224AA0'}
+            color="#FFFFFF"
+            px={8}
+            py={6}
+            fontWeight="bold"
+            letterSpacing="wide"
+            onMouseEnter={() => setBtnHovered(true)}
+            onMouseLeave={() => setBtnHovered(false)}
+            transform={btnHovered ? 'scale(1.02)' : 'scale(1)'}
+            transition="all 0.2s"
+            _hover={{}}
           >
             GitHub Link
           </Button>
-        </Flex>
+        </Box>
       </Flex>
 
-      {/* Second white box - About and video */}
-      <Flex bg="white" borderRadius="md" overflow="hidden" mt={10} minH="400px">
-        <Box flex={1} p={10} ml={50}>
-          <Heading fontWeight={"bold"} fontSize={30} mb={6}>ABOUT</Heading>
+      {/* About & Video */}
+      <Flex gap={10} wrap="wrap" mb={16} animation={`${fadeSlideUp} 0.6s ease-out 0.1s forwards`} opacity={0}>
+        <Box flex={1} minW="300px">
+          <Heading fontSize="2xl" fontWeight="900" color="#000000" letterSpacing="tight" mb={2}>About</Heading>
+          <Box w="40px" h="3px" bg="#224AA0" mb={6} />
 
-          <Text fontWeight="bold">Platform</Text>
-          <List.Root pl={4} spacing={1} mb={4}>
-            <List.Item>Windows</List.Item>
+          <Text fontWeight="bold" color="#0a1628" mb={1}>Platform</Text>
+          <List.Root pl={4} spacing={1} mb={5}>
+            <List.Item color="#1e3a5f" fontSize="md">Windows</List.Item>
           </List.Root>
 
-          <Text fontWeight="bold">Developers</Text>
-          <List.Root pl={4} spacing={1} mb={4}>
-            <List.Item>Programmer - Jayden Lombardo</List.Item>
-            <List.Item>Programmer - Drew Herlocher</List.Item>
-            <List.Item>Programmer - Dawson Jackson</List.Item>
-            <List.Item>Designer - Lily MacBride</List.Item>
-            <List.Item>Designer - Ben Bradway</List.Item>
-            <List.Item>Designer - Jean-Pierre Bailly-Hall</List.Item>
-            <List.Item>Designer - Ben Baehre</List.Item>
-            <List.Item>Artist - Brandon Bell</List.Item>
-            <List.Item>Artist - Nate Swietlik</List.Item>
-            <List.Item>Artist - Darla Nordstrom</List.Item>
-            <List.Item>Artist - Hanna Bacha</List.Item>
-            <List.Item>Sound - Marie Kutschke</List.Item>
-            <List.Item>Product Owner - Hale Walls</List.Item>
-            <List.Item>Production - Adele Goldader</List.Item>
+          <Text fontWeight="bold" color="#0a1628" mb={1}>Developers</Text>
+          <List.Root pl={4} spacing={1} mb={5}>
+            {['Programmer - Jayden Lombardi', 'Programmer - Drew Herlocher', 'Programmer - Dawson Jackson', 'Designer - Lily MacBride', 'Designer - Ben Bradway', 'Designer - Jean-Pierre Bailly-Hall', 'Designer - Ben Baehre', 'Artist - Brandon Bell', 'Artist - Nate Swietlik', 'Artist - Darla Nordstrom', 'Artist - Hanna Bacha', 'Sound - Marie Kutschke', 'Product Owner - Hale Walls', 'Production - Adele Goldader'].map((dev) => (
+              <List.Item key={dev} color="#1e3a5f" fontSize="md">{dev}</List.Item>
+            ))}
           </List.Root>
 
-          <Text fontWeight="bold">Technology</Text>
-          <List.Root pl={4} spacing={1} mb={4}>
-            <List.Item>Editing Software: Unity 6000.2.2f1, Visual Studios 2022 C#</List.Item>
-            <List.Item>Git Software: GitBash, TortoiseGit, GitHub Desktop</List.Item>
-            <List.Item>Art: Maya, Substance Painter, Substance Designer, Houdini</List.Item>
-            <List.Item>Audio: Cubase, Adobe Audtion</List.Item>
-            <List.Item>Communication: Discord, Mattermost, Jira, Confluence</List.Item>
+          <Text fontWeight="bold" color="#0a1628" mb={1}>Technology</Text>
+          <List.Root pl={4} spacing={1} mb={5}>
+            <List.Item color="#1e3a5f" fontSize="md">Unity 6000.2.2f1, Visual Studios 2022 C#</List.Item>
+            <List.Item color="#1e3a5f" fontSize="md">GitBash, TortoiseGit, GitHub Desktop</List.Item>
+            <List.Item color="#1e3a5f" fontSize="md">Maya, Substance Painter, Houdini</List.Item>
+            <List.Item color="#1e3a5f" fontSize="md">Cubase, Adobe Audition</List.Item>
           </List.Root>
 
-          <Text fontWeight="bold">Duration</Text>
-          <List.Root pl={4} spacing={1} mb={4}>
-            <List.Item>7/8 months</List.Item>
+          <Text fontWeight="bold" color="#0a1628" mb={1}>Duration</Text>
+          <List.Root pl={4} spacing={1}>
+            <List.Item color="#1e3a5f" fontSize="md">7/8 months</List.Item>
           </List.Root>
         </Box>
 
-        <Flex flex={1} justify="center" align="center" p={10}>
-          <video
-            src="/videos/knightlight.mp4"
-            controls
-            style={{ width: '80%', borderRadius: '8px' }}
+        <Flex flex={1} minW="400px" align="center" justify="center">
+          <Box
+            as="iframe"
+            src="https://www.youtube.com/embed/YOUR_VIDEO_ID?vq=hd1080"
+            w="100%"
+            maxW="700px"
+            h="400px"
+            border="2px solid"
+            borderColor="#0a1628"
+            allowFullScreen
           />
         </Flex>
       </Flex>
 
-      <Flex mt={10} justify="center" gap="10%">
-        <Box bg="white" borderRadius="md" flex="0 0 45%" p={10}>
-          <Heading fontWeight={"bold"} fontSize={30} mb={4}>Responsibilities</Heading>
+      {/* Responsibilities & Future Changes */}
+      <Flex gap={10} wrap="wrap" mb={16} animation={`${fadeSlideUp} 0.6s ease-out 0.2s forwards`} opacity={0}>
+        <Box flex={1} minW="300px" bg="#e8f0fe" p={8}>
+          <Heading fontSize="2xl" fontWeight="900" color="#000000" letterSpacing="tight" mb={2}>Responsibilities</Heading>
+          <Box w="40px" h="3px" bg="#224AA0" mb={6} />
           <List.Root pl={4} spacing={2}>
-            <List.Item>Implemented premade animations on player and enemies</List.Item>
-            <List.Item>Used feedback from various testing sessions to improve on mechanics and game feel</List.Item>
-            <List.Item>Created and upkept a Technical Plan and Systems + Mechanics List</List.Item>
+            <List.Item color="#0a1628" fontSize="md">Implemented premade animations on player and enemies</List.Item>
+            <List.Item color="#0a1628" fontSize="md">Used feedback from testing sessions to improve mechanics</List.Item>
+            <List.Item color="#0a1628" fontSize="md">Created and maintained Technical Plan and Systems List</List.Item>
           </List.Root>
         </Box>
 
-        <Box bg="white" borderRadius="md" flex="0 0 45%" p={10}>
-          <Heading fontWeight={"bold"} fontSize={30} mb={4}>Future Changes</Heading>
+        <Box flex={1} minW="300px" bg="#e8f0fe" p={8}>
+          <Heading fontSize="2xl" fontWeight="900" color="#000000" letterSpacing="tight" mb={2}>Future Changes</Heading>
+          <Box w="40px" h="3px" bg="#224AA0" mb={6} />
           <List.Root pl={4} spacing={2}>
-            <List.Item>Better game feel with more testing and feedback</List.Item>
+            <List.Item color="#0a1628" fontSize="md">Better game feel with more testing and feedback</List.Item>
           </List.Root>
         </Box>
       </Flex>
 
-      <Box mt={10}>
-        <Heading fontWeight={"bold"} fontSize={30} mb={6} textAlign="center">Gallery</Heading>
-        <Flex justify="center" gap={6}>
-          <Image
-            src="https://via.placeholder.com/400x225"
-            alt="Screenshot 1"
-            borderRadius="md"
-            border="2px solid black"
-          />
-          <Image
-            src="https://via.placeholder.com/400x225"
-            alt="Screenshot 2"
-            borderRadius="md"
-            border="2px solid black"
-          />
-          <Image
-            src="https://via.placeholder.com/400x225"
-            alt="Screenshot 3"
-            borderRadius="md"
-            border="2px solid black"
-          />
+      {/* Gallery */}
+      <Box animation={`${fadeSlideUp} 0.6s ease-out 0.3s forwards`} opacity={0}>
+        <Heading fontSize="2xl" fontWeight="900" color="#000000" letterSpacing="tight" mb={2}>Gallery</Heading>
+        <Box w="40px" h="3px" bg="#224AA0" mb={8} />
+        <Flex gap={6} wrap="wrap" justify="center">
+          {[1, 2, 3].map((i) => (
+            <ImageLightbox key={i} src="https://via.placeholder.com/400x225" alt={`Screenshot ${i}`} />
+          ))}
         </Flex>
       </Box>
 
