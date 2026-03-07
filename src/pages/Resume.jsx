@@ -53,7 +53,7 @@ function Entry({ title, subtitle, location, date, bullets }) {
 
 export default function Resume() {
   return (
-    <Box maxW="800px" mx="auto" py={{ base: 4, lg: 8 }} px={{ base: 2, md: 0 }}>
+    <Box maxW="800px" mx="auto" py={{ base: 4, lg: 8 }} px={{ base: 4, md: 6 }}>
       {/* Header */}
       <Box
         animation={`${fadeSlideUp} 0.6s ease-out forwards`}

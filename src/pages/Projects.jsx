@@ -166,7 +166,7 @@ export default function Projects() {
     ]
 
     return (
-        <Box maxW="1100px" mx="auto" py={{ base: 4, lg: 8 }} px={{ base: 2, md: 8 }}>
+        <Box maxW="1100px" mx="auto" py={{ base: 4, lg: 8 }} px={{ base: 4, md: 8 }}>
             <Box maxW="950px" mx="auto">
                 {/* Games Section */}
                 <SectionHeader index={0}>Games</SectionHeader>
