@@ -50,7 +50,7 @@ export default function ChymaPage() {
 
           <Button
             as="a"
-            href="https://github.com/jaydlomb/Chyma"
+            href="https://quackennn.itch.io/chyma-and-the-toll-of-time"
             target="_blank"
             bg={btnHovered ? '#1a3a7a' : '#224AA0'}
             color="#FFFFFF"
@@ -64,7 +64,7 @@ export default function ChymaPage() {
             transition="all 0.2s"
             _hover={{}}
           >
-            GitHub Link
+            Itch.IO Link
           </Button>
         </Box>
       </Flex>

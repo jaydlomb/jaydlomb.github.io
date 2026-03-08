@@ -2,7 +2,13 @@ import { useState } from 'react'
 import { Box, Flex, Text, Button, Heading, List } from '@chakra-ui/react'
 import { keyframes } from '@emotion/react'
 import ImageLightbox from '../../components/ImageLightbox'
+import GalleryGrid from '../../components/GalleryGrid'
 import snowboardfree from '../../assets/images/snowboardfree.png'
+import snowboardfree1 from '../../assets/images/snowboardfree1.png'
+import snowboardfree2 from '../../assets/images/snowboardfree2.png'
+import snowboardfree3 from '../../assets/images/snowboardfree3.png'
+import snowboardfree4 from '../../assets/images/snowboardfree4.png'
+import snowboardfree5 from '../../assets/images/snowboardfree5.png'
 
 const fadeSlideUp = keyframes`
   from { opacity: 0; transform: translateY(20px); }
@@ -137,13 +143,14 @@ export default function SnowboardFreePage() {
       <Box animation={`${fadeSlideUp} 0.6s ease-out 0.3s forwards`} opacity={0}>
         <Heading fontSize={{ base: 'lg', md: '2xl' }} fontWeight="900" color="#000000" letterSpacing="tight" mb={2}>Gallery</Heading>
         <Box w="40px" h="3px" bg="#224AA0" mb={8} />
-        <Flex gap={{ base: 4, md: 6 }} wrap="wrap" justify="center">
-          {[1, 2, 3].map((i) => (
-            <ImageLightbox key={i} src="https://via.placeholder.com/400x225" alt={`Screenshot ${i}`} />
-          ))}
-        </Flex>
+        <GalleryGrid images={[
+          { src: snowboardfree1, alt: 'Screenshot 1' },
+          { src: snowboardfree2, alt: 'Screenshot 2' },
+          { src: snowboardfree3, alt: 'Screenshot 3' },
+          { src: snowboardfree5, alt: 'Screenshot 4' },
+          { src: snowboardfree4, alt: 'Screenshot 5' },
+        ]} />
       </Box>
-
     </Box>
   )
 }

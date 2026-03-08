@@ -2,7 +2,14 @@ import { useState } from 'react'
 import { Box, Flex, Text, Button, Heading, List } from '@chakra-ui/react'
 import { keyframes } from '@emotion/react'
 import ImageLightbox from '../../components/ImageLightbox'
+import GalleryGrid from '../../components/GalleryGrid'
 import knightlight from '../../assets/images/knightlight.png'
+import knightlight1 from '../../assets/images/knightlight1.png'
+import knightlight2 from '../../assets/images/knightlight2.png'
+import knightlight3 from '../../assets/images/knightlight3.png'
+import knightlight4 from '../../assets/images/knightlight4.png'
+import knightlight5 from '../../assets/images/knightlight5.png'
+import knightlight6 from '../../assets/images/knightlight6.png'
 
 const fadeSlideUp = keyframes`
   from { opacity: 0; transform: translateY(20px); }
@@ -142,13 +149,15 @@ export default function KnightLightPage() {
       <Box animation={`${fadeSlideUp} 0.6s ease-out 0.3s forwards`} opacity={0}>
         <Heading fontSize={{ base: 'lg', md: '2xl' }} fontWeight="900" color="#000000" letterSpacing="tight" mb={2}>Gallery</Heading>
         <Box w="40px" h="3px" bg="#224AA0" mb={8} />
-        <Flex gap={{ base: 4, md: 6 }} wrap="wrap" justify="center">
-          {[1, 2, 3].map((i) => (
-            <ImageLightbox key={i} src="https://via.placeholder.com/400x225" alt={`Screenshot ${i}`} />
-          ))}
-        </Flex>
+        <GalleryGrid images={[
+          { src: knightlight1, alt: 'Screenshot 1' },
+          { src: knightlight2, alt: 'Screenshot 2' },
+          { src: knightlight3, alt: 'Screenshot 3' },
+          { src: knightlight4, alt: 'Screenshot 4' },
+          { src: knightlight5, alt: 'Screenshot 5' },
+          { src: knightlight6, alt: 'Screenshot 6' },
+        ]} />
       </Box>
-
     </Box>
   )
 }
