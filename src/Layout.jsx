@@ -7,7 +7,6 @@ export default function Layout() {
   const location = useLocation()
 
   const navLinks = [
-    { label: 'Projects', to: '/projects' },
     { label: 'Resume', to: '/resume' },
     { label: 'Contact', to: '/contact' },
   ]
@@ -32,74 +31,61 @@ export default function Layout() {
             Jayden Lombardi
           </Box>
 
-          <HStack spacing={{ base: 4, md: 10 }}>
-            {navLinks.map(({ label, to }) => (
-              <Box
-                key={to}
-                as={Link}
-                to={to}
-                position="relative"
-                color={location.pathname === to ? '#224AA0' : '#e8f0fe'}
-                _hover={{ color: '#224AA0' }}
-                fontSize={{ base: 'sm', md: 'lg' }}
-                fontWeight="bold"
-                letterSpacing="wide"
-                transition="color 0.3s"
-              >
-                {label}
-                <Box
-                  position="absolute"
-                  bottom="-6px"
-                  left={0}
-                  w={location.pathname === to ? '100%' : '0%'}
-                  h="3px"
-                  bg="#224AA0"
-                  transition="width 0.3s"
-                />
-              </Box>
-            ))}
-          </HStack>
+<HStack gap={{ base: 6, md: 8 }}>
+  {navLinks.map(({ label, to }, index) => (
+    <>
+      {index > 0 && (
+        <Box h="24px" w="3px" bg="#e8f0fe" />
+      )}
+      <Box
+        key={to}
+        as={Link}
+        to={to}
+        position="relative"
+        color={location.pathname === to ? '#224AA0' : '#e8f0fe'}
+        _hover={{ color: '#224AA0' }}
+        fontSize={{ base: 'lg', md: '2xl' }}
+        fontWeight="bold"
+        letterSpacing="wide"
+        transition="color 0.3s"
+      >
+        {label}
+        <Box
+          position="absolute"
+          bottom="-6px"
+          left={0}
+          w={location.pathname === to ? '100%' : '0%'}
+          h="3px"
+          bg="#224AA0"
+          transition="width 0.3s"
+        />
+      </Box>
+    </>
+  ))}
+</HStack>
         </Flex>
       </Box>
 
       {/* Page Content */}
-      <Box as="main" flex="1" px={{ base: 4, md: 8 }} py={{ base: 6, md: 10 }} bg="#FFFFFF">
+      <Box as="main" flex="1">
         <Outlet />
       </Box>
 
-      {/* Footer */}
+{/* Footer */}
       <Box as="footer" bg="#000000" px={{ base: 4, md: 10 }} py={{ base: 6, md: 10 }}>
         <Flex 
-          justify="space-between" 
+          justify="space-between"
           align="center"
           direction={{ base: 'column', md: 'row' }}
           gap={{ base: 6, md: 0 }}
         >
 
-          {/* Left - Resume Download */}
+          {/* Left - Social Icons */}
           <Box textAlign={{ base: 'center', md: 'left' }}>
-            <Text fontWeight="bold" color="#e8f0fe" fontSize={{ base: 'sm', md: 'md' }} letterSpacing="wide">
-              Resume
-            </Text>
-            <a href={resumePDF} download="ResumeJL.pdf">
-              <Text
-                color="#3b5998"
-                fontSize={{ base: 'sm', md: 'md' }}
-                _hover={{ color: '#224AA0' }}
-                cursor="pointer"
-                transition="color 0.3s"
-              >
-                Download
-              </Text>
-            </a>
-          </Box>
-
-          {/* Center - Social Icons */}
-          <Box textAlign="center">
             <Text color="#e8f0fe" fontWeight="bold" fontSize={{ base: 'sm', md: 'md' }} mb={{ base: 2, md: 4 }} letterSpacing="wide">
               Follow Me
             </Text>
-            <HStack spacing={{ base: 4, md: 6 }} justify="center">
+            <HStack spacing={{ base: 4, md: 6 }} justify={{ base: 'center', md: 'flex-start' }}>
               <a href="https://www.linkedin.com/in/jayden-lombardi/" target="_blank" rel="noreferrer">
                 <Box as={FaLinkedin} boxSize={{ base: '22px', md: '28px' }} color="#e8f0fe" _hover={{ color: '#224AA0' }} transition="color 0.3s" />
               </a>

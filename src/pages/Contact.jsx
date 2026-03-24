@@ -58,7 +58,7 @@ export default function Contact() {
       <VStack
         align="start"
         spacing={{ base: 4, md: 5 }}
-        mb={{ base: 8, md: 12 }}
+        mb={{ base: 12, md: 20 }}
         animation={`${fadeSlideUp} 0.6s ease-out 0.1s forwards`}
         opacity={0}
       >
