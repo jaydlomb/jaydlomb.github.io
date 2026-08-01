@@ -2,7 +2,7 @@ import { useNavigate } from 'react-router-dom'
 import { Box, Flex, Image, Heading, Text, Button } from '@chakra-ui/react'
 import { keyframes } from '@emotion/react'
 import FadeInOnScroll from '../components/FadeInOnScroll'
-import photo from '../assets/images/headshot.png'
+import photo from '../assets/images/JaydenHeadshot.png'
 import chyma from '../assets/images/chyma.png'
 import knightlight from '../assets/images/knightlight.png'
 
