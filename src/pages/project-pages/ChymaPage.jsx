@@ -50,7 +50,7 @@ export default function ChymaPage() {
 
           <Button
             as="a"
-            href="https://quackennn.itch.io/chyma-and-the-toll-of-time"
+            href="https://store.steampowered.com/app/4555180/Chyma_and_the_Toll_of_Time/"
             target="_blank"
             bg={btnHovered ? '#1a3a7a' : '#224AA0'}
             color="#FFFFFF"
@@ -64,7 +64,7 @@ export default function ChymaPage() {
             transition="all 0.2s"
             _hover={{}}
           >
-            Itch.IO Link
+            Steam Link
           </Button>
         </Box>
       </Flex>
@@ -139,6 +139,7 @@ export default function ChymaPage() {
             <List.Item color="#0a1628" fontSize={{ base: 'sm', md: 'md' }}>Better game feel with more testing and feedback</List.Item>
             <List.Item color="#0a1628" fontSize={{ base: 'sm', md: 'md' }}>Code architecture restructuring</List.Item>
             <List.Item color="#0a1628" fontSize={{ base: 'sm', md: 'md' }}>Optimization and performance enhancement</List.Item>
+            <List.Item color="#0a1628" fontSize={{ base: 'sm', md: 'md' }}>Implementing steam achievements</List.Item>
           </List.Root>
         </Box>
       </Flex>

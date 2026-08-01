@@ -112,7 +112,7 @@ export default function Home() {
         'Isometric puzzle game built in Unity',
         'Designed UI/UX and Mechanics',
         '15-person team',
-        'Shipping May 2026',
+        'Released May 2026',
       ],
     },
     {
@@ -231,9 +231,6 @@ export default function Home() {
               lineHeight={1.7}
             >
               Game programmer always striving to learn, create, and code more.
-              <Text as="span" display="block" mt={2} fontSize={{ base: 'xs', md: 'sm' }} color="brand.oxford">
-                UI/Systems Programmer · 15-person team · Shipping May 2026
-              </Text>
             </Text>
           </FadeInOnScroll>
         </Box>
